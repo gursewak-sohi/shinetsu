@@ -1,17 +1,17 @@
 @font-face {
-    font-family: 'yumedium';
-    src: url('../font/YuGo-Medium-AlphaNum.eot');
-    src: url('../font/YuGo-Medium-AlphaNum.eot?#iefix') format('embedded-opentype'), url('../font/YuGo-Medium-AlphaNum.woff2') format('woff2'), url('../font/YuGo-Medium-AlphaNum.woff') format('woff'), url('../font/YuGo-Medium-AlphaNum.ttf') format('truetype'), url('../font/YuGo-Medium-AlphaNum.svg#YuGo-Medium-AlphaNum') format('svg');
-    font-weight: normal;
+    font-family: 'yubold';
+    src: url('../font/YuGothic-Bold.eot');
+    src: url('../font/YuGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../font/YuGothic-Bold.woff2') format('woff2'), url('../font/YuGothic-Bold.woff') format('woff'), url('../font/YuGothic-Bold.ttf') format('truetype'), url('../font/YuGothic-Bold.svg#YuGothic-Bold') format('svg');
+    font-weight: bold;
     font-style: normal;
     font-display: swap;
 }
 
 @font-face {
-    font-family: 'yubold';
-    src: url('../font/YuGothic-Bold.eot');
-    src: url('../font/YuGothic-Bold.eot?#iefix') format('embedded-opentype'), url('../font/YuGothic-Bold.woff2') format('woff2'), url('../font/YuGothic-Bold.woff') format('woff'), url('../font/YuGothic-Bold.ttf') format('truetype'), url('../font/YuGothic-Bold.svg#YuGothic-Bold') format('svg');
-    font-weight: bold;
+    font-family: 'yumedium';
+    src: url('../font/YuGo-Medium-AlphaNum.eot');
+    src: url('../font/YuGo-Medium-AlphaNum.eot?#iefix') format('embedded-opentype'), url('../font/YuGo-Medium-AlphaNum.woff2') format('woff2'), url('../font/YuGo-Medium-AlphaNum.woff') format('woff'), url('../font/YuGo-Medium-AlphaNum.ttf') format('truetype'), url('../font/YuGo-Medium-AlphaNum.svg#YuGo-Medium-AlphaNum') format('svg');
+    font-weight: 500;
     font-style: normal;
     font-display: swap;
 }
@@ -26,7 +26,7 @@
 }
 
 body {
-    font-family: 'yubold';
+    font-family: 'yubold', sans-serif;
     color: #333333;
 }
 
@@ -313,6 +313,7 @@ button:focus {
     border: none;
     border-radius: 20px;
     background-color: #F7F7F7;
+    transition: 0.3s all;
 }
 
 .load-more-news button .load-svg {
@@ -693,7 +694,7 @@ button:focus {
 .c-btn p {
     color: white;
     font-weight: bold;
-    font-size: 15px;
+    font-size: 14px;
     padding-left: 10px;
     font-weight: bold;
     font-family: "yubold";
@@ -947,6 +948,12 @@ button:focus {
     background-repeat: no-repeat;
     height: 150px;
     object-fit: cover;
+    transition: 0.3s all;
+    border-radius: 20px;
+}
+
+.process-banner:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px
 }
 
 .pro-heading {
@@ -988,6 +995,12 @@ button:focus {
     background-color: #F7F7F7;
     height: 150px;
     width: 100%;
+    transition: 0.3s all;
+    border-radius: 20px;
+}
+
+.product-banner:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 }
 
 .product-banner a {
@@ -1037,6 +1050,12 @@ button:focus {
     background-repeat: no-repeat;
     height: 150px;
     object-fit: cover;
+    transition: 0.3s all;
+    border-radius: 20px;
+}
+
+.contact-banner:hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
 }
 
 .contact-banner a {
@@ -1072,9 +1091,79 @@ button:focus {
     text-align: center;
 }
 
+.load-more-news button:hover {
+    background-color: #ececec;
+}
+
 @media (max-width: 1200px) {}
 
+@media (min-width: 1400px) {
+    .container-site {
+        max-width: 1225px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-brand img {
+        width: 275px;
+        overflow: hidden;
+    }
+    .video-section {
+        padding-bottom: 72.25%;
+    }
+    .other-label {
+        width: 225px;
+        font-size: 13px;
+    }
+}
+
 @media only screen and (min-width: 768px) and (max-width: 990px) {
+    .features-products {
+        max-width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+    .video-section {
+        padding-bottom: 96.25%;
+    }
+    .contect-feature {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .banner-content-bg-image img {
+        height: 260px;
+    }
+    .or {
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .span-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: 0;
+        margin-top: 20px;
+        margin-bottom: 25px;
+        transform: rotateZ(90deg);
+    }
+    .f-sub-section ul li a p {
+        font-size: 13px;
+    }
+    .navbar-brand img {
+        width: 320px;
+    }
+    .navbar-brand {
+        margin-left: 0;
+    }
+    .navbar-toggler-icon svg {
+        width: 27px;
+    }
     .banner-content-bg-image img {
         width: 100%;
         object-fit: cover;
@@ -1173,15 +1262,19 @@ button:focus {
         width: 100%;
     }
     .video-section {
-        padding-bottom: 46.25%;
+        padding-bottom: 72.25%;
     }
     .other-label {
         width: 234px;
     }
     .process-banner {
+        transition: 0.3s all;
         width: 100%;
         background-size: cover;
         margin-bottom: 20px;
+    }
+    .process-banner:hover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
     }
     .product-banner {
         margin-bottom: 20px;
@@ -1199,9 +1292,12 @@ button:focus {
 }
 
 @media (max-width: 767px) {
+    .row.gx-30 {
+        --bs-gutter-x: 0;
+    }
     .other-label.ht {
         height: auto;
-        width: 460px;
+        width: 210px;
     }
     .equipment-heading {
         width: 100%;
@@ -1212,7 +1308,7 @@ button:focus {
         height: 490px;
     }
     .banner-content-right-content p {
-        font-size: 13px;
+        padding: 30px !important;
     }
     .banner-heading h1 {
         font-size: 35px;
@@ -1474,6 +1570,6 @@ button:focus {
         transform: rotateZ(90deg);
     }
     .row.gx-30 {
-        display: none;
+        --bs-gutter-x: 0;
     }
 }

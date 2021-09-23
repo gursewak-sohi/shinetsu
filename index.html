@@ -1,106 +1,115 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <!-- Required meta tags -->
-      <title>Shinetsu</title>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- Bootstrap CSS -->
-      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-      <link rel="stylesheet" href="css/animate.css" type="text/css">
-      <link href="css/style.css"rel="stylesheet">
-      <style>
-         .page-loading {
-         position: fixed;
-         top: 0;
-         right: 0;
-         bottom: 0;
-         left: 0;
-         width: 100%;
-         height: 100%;
-         -webkit-transition: all .4s .2s ease-in-out;
-         transition: all .4s .2s ease-in-out;
-         background-color: #fff;
-         opacity: 0;
-         visibility: hidden;
-         z-index: 9999;
-         }
-         .page-loading.active {
-         opacity: 1;
-         visibility: visible;
-         }
-         .page-loading-inner {
-         position: absolute;
-         top: 50%;
-         left: 0;
-         width: 100%;
-         text-align: center;
-         -webkit-transform: translateY(-50%);
-         transform: translateY(-50%);
-         -webkit-transition: opacity .2s ease-in-out;
-         transition: opacity .2s ease-in-out;
-         opacity: 0;
-         }
-         .page-loading.active>.page-loading-inner {
-         opacity: 1;
-         }
-         .page-loading-inner>span {
-         display: block;
-         font-family: 'Inter', sans-serif;
-         font-size: 1rem;
-         font-weight: normal;
-         color: #009B94;
-         }
-         .page-spinner {
-         display: inline-block;
-         width: 2.75rem;
-         height: 2.75rem;
-         margin-bottom: .75rem;
-         vertical-align: text-bottom;
-         border: .15em solid #009B94;
-         border-right-color: transparent;
-         border-radius: 50%;
-         -webkit-animation: spinner .75s linear infinite;
-         animation: spinner .75s linear infinite;
-         }
-         @-webkit-keyframes spinner {
-         100% {
-         -webkit-transform: rotate(360deg);
-         transform: rotate(360deg);
-         }
-         }
-         @keyframes spinner {
-         100% {
-         -webkit-transform: rotate(360deg);
-         transform: rotate(360deg);
-         }
-         }
-      </style>
-      <!-- Page loading scripts-->
-      <script>
-         (function() {
-             window.onload = function() {
-                 var preloader = document.querySelector('.page-loading');
-                 preloader.classList.remove('active');
-                 setTimeout(function() {
-                     preloader.remove();
-                 }, 2000);
-             };
-         })();
-      </script>
-   </head>
-   <body id="top">
-      <div class="page-loading active">
-         <div class="page-loading-inner">
+<head>
+    <!-- Required meta tags -->
+    <title>Shinetsu</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #009B94;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #009B94;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
+    </script>
+</head>
+
+<body id="top">
+    <div class="page-loading active">
+        <div class="page-loading-inner">
             <div class="page-spinner"></div>
             <span>Loading...</span>
-         </div>
-      </div>
-      <!-- Navnar-section -->
-      <nav class="navbar main-nav-bar navbar-expand-lg  ">
-         <div class="container container-site">
-            <a class="navbar-brand" href="#"><img src="img/logo.png"/></a>
+        </div>
+    </div>
+    <!-- Navnar-section -->
+    <nav class="navbar main-nav-bar navbar-expand-lg  ">
+        <div class="container container-site">
+            <a class="navbar-brand" href="#"><img src="img/logo.png" /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                <span class="navbar-toggler-icon">
                  <svg width="35px" height="35px" viewBox="0 0 35 35" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -119,104 +128,103 @@
                </span>
             </button>
             <div class="collapse menu-items navbar-collapse" id="navbarSupportedContent">
-               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                  <li class="nav-item">
-                     <a class="nav-link active" aria-current="page" href="#">
-                        <div class="icon-svg">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.8" viewBox="0 0 16 12.8">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <div class="icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.8" viewBox="0 0 16 12.8">
                               <path id="Icon_awesome-sitemap" data-name="Icon awesome-sitemap" d="M3.2,8.8H.8a.8.8,0,0,0-.8.8V12a.8.8,0,0,0,.8.8H3.2A.8.8,0,0,0,4,12V9.6A.8.8,0,0,0,3.2,8.8Zm-.6-2H7.4V8H8.6V6.8h4.8V8h1.2V6.56a.961.961,0,0,0-.96-.96H8.6V4h1a.8.8,0,0,0,.8-.8V.8A.8.8,0,0,0,9.6,0H6.4a.8.8,0,0,0-.8.8V3.2a.8.8,0,0,0,.8.8h1V5.6H2.36a.961.961,0,0,0-.96.96V8H2.6Zm6.6,2H6.8a.8.8,0,0,0-.8.8V12a.8.8,0,0,0,.8.8H9.2A.8.8,0,0,0,10,12V9.6A.8.8,0,0,0,9.2,8.8Zm6,0H12.8a.8.8,0,0,0-.8.8V12a.8.8,0,0,0,.8.8h2.4A.8.8,0,0,0,16,12V9.6A.8.8,0,0,0,15.2,8.8Z" fill="#009b94"/>
                            </svg>
-                        </div>
-                        <span>サイトマップ</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <div class="icon-svg">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
+                            </div>
+                            <span>サイトマップ</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
                               <g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-1.5 -1.5)">
                                  <path id="パス_1" data-name="パス 1" d="M8.708,1.5a7.209,7.209,0,0,1,2.806,13.849A7.209,7.209,0,0,1,5.9,2.067,7.163,7.163,0,0,1,8.708,1.5Zm0,13.1a5.9,5.9,0,1,0-4.17-1.727A5.859,5.859,0,0,0,8.708,14.6Z" transform="translate(0 0)" fill="#009b94"/>
                                  <path id="パス_2" data-name="パス 2" d="M15.26,17.768H2.155a.634.634,0,1,1,0-1.268h13.1a.635.635,0,1,1,0,1.268Z" transform="translate(0 -8.427)" fill="#009b94"/>
                                  <path id="パス_3" data-name="パス 3" d="M13.671,1.5a.625.625,0,0,1,.468.213,10.871,10.871,0,0,1,2.7,6.981q0,.014,0,.027a10.871,10.871,0,0,1-2.7,6.981.621.621,0,0,1-.936,0,10.871,10.871,0,0,1-2.7-6.981q0-.014,0-.027a10.871,10.871,0,0,1,2.7-6.981A.625.625,0,0,1,13.671,1.5Zm1.9,7.208a9.564,9.564,0,0,0-1.9-5.536,9.564,9.564,0,0,0-1.9,5.536,9.564,9.564,0,0,0,1.9,5.536A9.564,9.564,0,0,0,15.573,8.708Z" transform="translate(-4.963 0)" fill="#009b94"/>
                               </g>
                            </svg>
-                        </div>
-                        <span>English</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <div class="icon-svg">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
+                            </div>
+                            <span>English</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
                               <g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-1.5 -1.5)">
                                  <path id="パス_1" data-name="パス 1" d="M8.708,1.5a7.209,7.209,0,0,1,2.806,13.849A7.209,7.209,0,0,1,5.9,2.067,7.163,7.163,0,0,1,8.708,1.5Zm0,13.1a5.9,5.9,0,1,0-4.17-1.727A5.859,5.859,0,0,0,8.708,14.6Z" transform="translate(0 0)" fill="#009b94"/>
                                  <path id="パス_2" data-name="パス 2" d="M15.26,17.768H2.155a.634.634,0,1,1,0-1.268h13.1a.635.635,0,1,1,0,1.268Z" transform="translate(0 -8.427)" fill="#009b94"/>
                                  <path id="パス_3" data-name="パス 3" d="M13.671,1.5a.625.625,0,0,1,.468.213,10.871,10.871,0,0,1,2.7,6.981q0,.014,0,.027a10.871,10.871,0,0,1-2.7,6.981.621.621,0,0,1-.936,0,10.871,10.871,0,0,1-2.7-6.981q0-.014,0-.027a10.871,10.871,0,0,1,2.7-6.981A.625.625,0,0,1,13.671,1.5Zm1.9,7.208a9.564,9.564,0,0,0-1.9-5.536,9.564,9.564,0,0,0-1.9,5.536,9.564,9.564,0,0,0,1.9,5.536A9.564,9.564,0,0,0,15.573,8.708Z" transform="translate(-4.963 0)" fill="#009b94"/>
                               </g>
                            </svg>
-                        </div>
-                        <span>中文</span>
-                     </a>
-                  </li>
-                  <li class="nav-item">
-                     <a class="nav-link" href="#">
-                        <div class="icon-svg">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
+                            </div>
+                            <span>中文</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <div class="icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
                               <g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-1.5 -1.5)">
                                  <path id="パス_1" data-name="パス 1" d="M8.708,1.5a7.209,7.209,0,0,1,2.806,13.849A7.209,7.209,0,0,1,5.9,2.067,7.163,7.163,0,0,1,8.708,1.5Zm0,13.1a5.9,5.9,0,1,0-4.17-1.727A5.859,5.859,0,0,0,8.708,14.6Z" transform="translate(0 0)" fill="#009b94"/>
                                  <path id="パス_2" data-name="パス 2" d="M15.26,17.768H2.155a.634.634,0,1,1,0-1.268h13.1a.635.635,0,1,1,0,1.268Z" transform="translate(0 -8.427)" fill="#009b94"/>
                                  <path id="パス_3" data-name="パス 3" d="M13.671,1.5a.625.625,0,0,1,.468.213,10.871,10.871,0,0,1,2.7,6.981q0,.014,0,.027a10.871,10.871,0,0,1-2.7,6.981.621.621,0,0,1-.936,0,10.871,10.871,0,0,1-2.7-6.981q0-.014,0-.027a10.871,10.871,0,0,1,2.7-6.981A.625.625,0,0,1,13.671,1.5Zm1.9,7.208a9.564,9.564,0,0,0-1.9-5.536,9.564,9.564,0,0,0-1.9,5.536,9.564,9.564,0,0,0,1.9,5.536A9.564,9.564,0,0,0,15.573,8.708Z" transform="translate(-4.963 0)" fill="#009b94"/>
                               </g>
                            </svg>
-                        </div>
-                        <span>繁體字</span>
-                     </a>
-                  </li>
-               </ul>
-               <form class="d-flex search-bar">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="15.731" height="15.731" viewBox="0 0 15.731 15.731">
+                            </div>
+                            <span>繁體字</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex search-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15.731" height="15.731" viewBox="0 0 15.731 15.731">
                      <path id="Icon_map-search" data-name="Icon map-search" d="M12.951,10.858a6.221,6.221,0,1,0-2.094,2.093l4.221,4.221,2.093-2.094Zm-5.3.63a3.838,3.838,0,1,1,3.84-3.836,3.844,3.844,0,0,1-3.84,3.836Z" transform="translate(-1.44 -1.44)" fill="#b2b2b2"/>
                   </svg>
-                  <input class=" me-0" type="search"  aria-label="Search">
-               </form>
+                    <input class=" me-0" type="search" aria-label="Search">
+                </form>
             </div>
-         </div>
-      </nav>
-      <!-- Navnar-section end -->
-      <!-- banner section-->
-      <section class="banner-section">
-         <div class="container container-site">
+        </div>
+    </nav>
+    <!-- Navnar-section end -->
+    <!-- banner section-->
+    <section class="banner-section">
+        <div class="container container-site">
             <div class="row gx-30">
-               <div class="col-12">
-                  <div class="banner-heading wow fadeInUp" data-wow-duration="1s">
-                     <h1>マイクロLEDプロセス技術</h1>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="banner-content-div">
-                     <div class="banner-content-bg-image wow fadeInUp" data-wow-duration="1s">
-                        <img src="img/g-img.png"/>
-                     </div>
-                     <div class="banner-content-right-content wow fadeInUp" data-wow-duration="1s">
-                        <p>
-                          マイクロLEDディスプレイは、次世代ディスプレイの最有力候補とされていますが、微細チップの取り扱いの難しさゆえ、高い製造コストが量産化実現への大きな障害になっています。<br>
-特に、マイクロLEDチップ製造工程と各チップの移送工程の複雑さや低い歩留まりの改善が量産化へのカギであり、信越化学グループの技術を結集してこの課題を解決する技術を開発しました。
-                        </p>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-7">
-                  <div class="banner-bottom-left-image wow fadeInUp" data-wow-duration="1s">
-                     <div class="banner-hding">
-                       <h1>マイクロLEDの低コスト化を実現する<br>プロセスソリューション</h1>
-                     </div>
-                     <div class="b-detial">
-                       <div class="block-1">
-                         <h1>信越化学独自の素材</h1>
-                         <span><img src="img/Group-img1.png"/></span>
-                       </div>
-                       <div class="block-2">
-                         <span>
+                <div class="col-12">
+                    <div class="banner-heading wow fadeInUp" data-wow-duration="1s">
+                        <h1>マイクロLEDプロセス技術</h1>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="banner-content-div">
+                        <div class="banner-content-bg-image wow fadeInUp" data-wow-duration="1s">
+                            <img src="img/g-img.png" />
+                        </div>
+                        <div class="banner-content-right-content wow fadeInUp" data-wow-duration="1s">
+                            <p>
+                                マイクロLEDディスプレイは、次世代ディスプレイの最有力候補とされていますが、微細チップの取り扱いの難しさゆえ、高い製造コストが量産化実現への大きな障害になっています。<br> 特に、マイクロLEDチップ製造工程と各チップの移送工程の複雑さや低い歩留まりの改善が量産化へのカギであり、信越化学グループの技術を結集してこの課題を解決する技術を開発しました。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-7">
+                    <div class="banner-bottom-left-image wow fadeInUp" data-wow-duration="1s">
+                        <div class="banner-hding">
+                            <h1>マイクロLEDの低コスト化を実現する<br>プロセスソリューション</h1>
+                        </div>
+                        <div class="b-detial">
+                            <div class="block-1">
+                                <h1>信越化学独自の素材</h1>
+                                <span><img src="img/Group-img1.png"/></span>
+                            </div>
+                            <div class="block-2">
+                                <span>
                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45.305" height="45.305" viewBox="0 0 45.305 45.305">
                              <defs>
                                <filter id="Union_6" x="0" y="0" width="45.305" height="45.305" filterUnits="userSpaceOnUse">
@@ -232,71 +240,70 @@
                              </g>
                            </svg>
                          </span>
-                       </div>
-                       <div class="block-1">
-                         <h1>エキシマレーザ装置</h1>
-                         <span><img src="img/group2-img.png"/></span>
-                       </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-5">
-                  <div class="banner-bottom-right wow fadeInUp" data-wow-duration="1s">
-                     <div class="video-section">
-                        <iframe width="100%" height="100%"
-                           src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
+                            </div>
+                            <div class="block-1">
+                                <h1>エキシマレーザ装置</h1>
+                                <span><img src="img/group2-img.png"/></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="banner-bottom-right wow fadeInUp" data-wow-duration="1s">
+                        <div class="video-section">
+                            <iframe width="100%" height="100%" src="https://www.youtube.com/embed/tgbNymZ7vqY?controls=0">
                         </iframe>
-                     </div>
-                  </div>
-               </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- banner section end -->
-      <!-- news section start -->
-      <section class="whats-news">
-         <div class="container container-site">
+        </div>
+    </section>
+    <!-- banner section end -->
+    <!-- news section start -->
+    <section class="whats-news">
+        <div class="container container-site">
             <div class="row">
-               <div class="col-12">
-                  <div class="whats-news-heading wow fadeInUp" data-wow-duration="1s">
-                     <h1>新着情報</h1>
-                     <h2>What’s new</h2>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="news-section">
-                     <ul>
-                        <li class="wow fadeInUp" data-wow-duration="1s">
-                           <div class="news-date">
-                              <p>2021.09.13</p>
-                           </div>
-                           <div class="news-label label-gray"><label>その他</label></div>
-                           <div class="news-line">
-                              <p>本社移転のご案内</p>
-                           </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-duration="1s">
-                           <div class="news-date">
-                              <p>2021.09.01</p>
-                           </div>
-                           <div class="news-label label-green"><label>ニュースリリース</label></div>
-                           <div class="news-line">
-                              <p>取締役及び執行役員に対するストックオプション（新株予約権）の払込金額確定のお知らせ</p>
-                           </div>
-                        </li>
-                        <li class="wow fadeInUp" data-wow-duration="1s">
-                           <div class="news-date">
-                              <p>2021.08.26</p>
-                           </div>
-                           <div class="news-label label-green"><label>ニュースリリース</label></div>
-                           <div class="news-line">
-                              <p>自己株式の取得結果及び取得終了に関するお知らせ</p>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-                  <div class="load-more-news wow fadeInUp" data-wow-duration="1s">
-                     <button>
+                <div class="col-12">
+                    <div class="whats-news-heading wow fadeInUp" data-wow-duration="1s">
+                        <h1>新着情報</h1>
+                        <h2>What’s new</h2>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="news-section">
+                        <ul>
+                            <li class="wow fadeInUp" data-wow-duration="1s">
+                                <div class="news-date">
+                                    <p>2021.09.13</p>
+                                </div>
+                                <div class="news-label label-gray"><label>その他</label></div>
+                                <div class="news-line">
+                                    <p>本社移転のご案内</p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-duration="1s">
+                                <div class="news-date">
+                                    <p>2021.09.01</p>
+                                </div>
+                                <div class="news-label label-green"><label>ニュースリリース</label></div>
+                                <div class="news-line">
+                                    <p>取締役及び執行役員に対するストックオプション（新株予約権）の払込金額確定のお知らせ</p>
+                                </div>
+                            </li>
+                            <li class="wow fadeInUp" data-wow-duration="1s">
+                                <div class="news-date">
+                                    <p>2021.08.26</p>
+                                </div>
+                                <div class="news-label label-green"><label>ニュースリリース</label></div>
+                                <div class="news-line">
+                                    <p>自己株式の取得結果及び取得終了に関するお知らせ</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="load-more-news wow fadeInUp" data-wow-duration="1s">
+                        <button>
                         <div class="load-svg">
                            <svg xmlns="http://www.w3.org/2000/svg" width="22.512" height="22.512" viewBox="0 0 22.512 22.512">
                               <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M11.819.562A11.256,11.256,0,1,1,.562,11.819,11.254,11.254,0,0,1,11.819.562ZM10.507,7.08l3.427,3.286H5.646a1.087,1.087,0,0,0-1.089,1.089v.726a1.087,1.087,0,0,0,1.089,1.089h8.288l-3.427,3.286a1.091,1.091,0,0,0-.018,1.557l.5.495a1.085,1.085,0,0,0,1.539,0L18.55,12.59a1.085,1.085,0,0,0,0-1.539L12.527,5.024a1.085,1.085,0,0,0-1.539,0l-.5.495a1.1,1.1,0,0,0,.018,1.561Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
@@ -304,555 +311,549 @@
                         </div>
                         <span>過去の一覧</span>
                      </button>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="process-banner wow fadeInUp" data-wow-duration="0s">
-                    <a href="javascript:;">
-                      <div class="pro-heading">
-                        <h1><color>【動画で見る】</color>信越化学が提供する</h1>
-                        <h2>マイクロLED製造一貫プロセス</h2>
-                        <p>【Watch in Video】Learn Shin-Etsu<br>
-Micro LED Chip Transfer Technologies</p>
-                      </div>
-                    </a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="product-banner wow fadeInUp" data-wow-duration="1s">
-                     <a href="javascript:;">
-                       <div class="product-banner-detial">
-                         <div class="p-image">
-                           <img src="img/baner-2img.png"/>
-                         </div>
-                         <div class="p-detail">
-                           <h1>製品情報</h1>
-                           <p> Products</p>
-                         </div>
-                       </div>
-                     </a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="contact-banner wow fadeInUp" data-wow-duration="1.5s">
-                     <a href="javascript:;">
-                       <div class="contact-detail">
-                         <h1>お問い合わせ</h1>
-                         <p>Contact</p>
-                       </div>
-                     </a>
-                  </div>
-               </div>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="process-banner wow fadeInUp" data-wow-duration="0s">
+                        <a href="javascript:;">
+                            <div class="pro-heading">
+                                <h1>
+                                    <color>【動画で見る】</color>信越化学が提供する</h1>
+                                <h2>マイクロLED製造一貫プロセス</h2>
+                                <p>【Watch in Video】Learn Shin-Etsu<br> Micro LED Chip Transfer Technologies</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="product-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="product-banner-detial">
+                                <div class="p-image">
+                                    <img src="img/baner-2img.png" />
+                                </div>
+                                <div class="p-detail">
+                                    <h1>製品情報</h1>
+                                    <p> Products</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="contact-banner wow fadeInUp" data-wow-duration="1.5s">
+                        <a href="javascript:;">
+                            <div class="contact-detail">
+                                <h1>お問い合わせ</h1>
+                                <p>Contact</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- news section end -->
-      <!-- Features section start -->
-      <section class="feature-section">
-         <div class=" container container-site">
+        </div>
+    </section>
+    <!-- news section end -->
+    <!-- Features section start -->
+    <section class="feature-section">
+        <div class=" container container-site">
             <div class="row">
-               <div class="col-12">
-                  <div class="whats-news-heading wow fadeInUp" data-wow-duration="1s">
-                     <h1>特長</h1>
-                     <h2>Features</h2>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="feature-listing">
-                     <ul>
-                        <li>
-                           <div class="f-list wow fadeInUp" data-wow-duration="0s">
-                              <div class="f-lsit-left">
-                                 <h1>シンプル</h1>
-                                 <h2>Simple</h2>
-                              </div>
-                              <div class="f-lsit-right">
-                                 <h1>レーザーリフトオフ*</h1>
-                                 <p>従来技術に比べてより単純化したプロセスで製造可能です。</p>
-                              </div>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="f-list wow fadeInUp" data-wow-duration="1.5s">
-                              <div class="f-lsit-left">
-                                 <h1>高速</h1>
-                                 <h2>Speed</h2>
-                              </div>
-                              <div class="f-lsit-right">
-                                 <h1>レーザーによる連続移送*</h1>
-                                 <p>※個々の一文は修正になります。修正文言は追ってお送りします。</p>
-                              </div>
-                           </div>
-                        </li>
-                        <li>
-                           <div class="f-list wow fadeInUp" data-wow-duration="1.5s">
-                              <div class="f-lsit-left">
-                                 <h1>正確</h1>
-                                 <h2>Aaccurate</h2>
-                              </div>
-                              <div class="f-lsit-right">
-                                 <h1>レーザー移送時の高精度位置決め</h1>
-                                 <p>高精度位置決めを実現する設備動作により正確なチップ移送が可能です。</p>
-                              </div>
-                           </div>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="feature-next-section">
-                     <div class="f-heading-sub-heading">
-                        <h1 class="wow fadeInUp" data-wow-duration="1s">※  レーザーリフトオフ(Laser Lift Off/LLO)  <span>とは、</span></h1>
-                        <p class="wow fadeInUp" data-wow-duration="1.5s">マイクロLEDウエハーまたは、移送部品上に配列されたチップの裏面側よりエキシマレーザーを照射することによってチップのみを剥離、レセプター基板へ移送する工程のことです。<br>
-                           信越化学グループは、移送部品と接触した状態でLLOを行うContact-LLOと、非接触の状態でLLOを行うGap-LLOのそれぞれに対応した製造装置と移送部品を取り揃えています。<br>
-                           これによって、さまざまなニーズに対応した移送プロセスのご提案が可能です。
-                        </p>
-                     </div>
-                     <div class="features-products">
-                        <div class="contect-feature wow fadeInUp" data-wow-duration="1s">
-                           <div class="cont-featur-img">
-                              <img class="llo" src="img/Contact-LLO.png"/>
-                           </div>
-                           <div class="cont-des">
-                              <h1>Contact-LLO</h1>
-                              <p>(接触)</p>
-                           </div>
+                <div class="col-12">
+                    <div class="whats-news-heading wow fadeInUp" data-wow-duration="1s">
+                        <h1>特長</h1>
+                        <h2>Features</h2>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="feature-listing">
+                        <ul>
+                            <li>
+                                <div class="f-list wow fadeInUp" data-wow-duration="0s">
+                                    <div class="f-lsit-left">
+                                        <h1>シンプル</h1>
+                                        <h2>Simple</h2>
+                                    </div>
+                                    <div class="f-lsit-right">
+                                        <h1>レーザーリフトオフ*</h1>
+                                        <p>従来技術に比べてより単純化したプロセスで製造可能です。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="f-list wow fadeInUp" data-wow-duration="1.5s">
+                                    <div class="f-lsit-left">
+                                        <h1>高速</h1>
+                                        <h2>Speed</h2>
+                                    </div>
+                                    <div class="f-lsit-right">
+                                        <h1>レーザーによる連続移送*</h1>
+                                        <p>※個々の一文は修正になります。修正文言は追ってお送りします。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="f-list wow fadeInUp" data-wow-duration="1.5s">
+                                    <div class="f-lsit-left">
+                                        <h1>正確</h1>
+                                        <h2>Aaccurate</h2>
+                                    </div>
+                                    <div class="f-lsit-right">
+                                        <h1>レーザー移送時の高精度位置決め</h1>
+                                        <p>高精度位置決めを実現する設備動作により正確なチップ移送が可能です。</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="feature-next-section">
+                        <div class="f-heading-sub-heading">
+                            <h1 class="wow fadeInUp" data-wow-duration="1s">※ レーザーリフトオフ(Laser Lift Off/LLO) <span>とは、</span></h1>
+                            <p class="wow fadeInUp" data-wow-duration="1.5s">マイクロLEDウエハーまたは、移送部品上に配列されたチップの裏面側よりエキシマレーザーを照射することによってチップのみを剥離、レセプター基板へ移送する工程のことです。<br> 信越化学グループは、移送部品と接触した状態でLLOを行うContact-LLOと、非接触の状態でLLOを行うGap-LLOのそれぞれに対応した製造装置と移送部品を取り揃えています。
+                                <br> これによって、さまざまなニーズに対応した移送プロセスのご提案が可能です。
+                            </p>
                         </div>
-                        <div class="or">or</div>
-                        <div class="contect-feature wow fadeInUp" data-wow-duration="1s">
-                           <div class="cont-featur-img">
-                              <img class="gapllo" src="img/Gap-LLO.png"/>
-                           </div>
-                           <div class="cont-des">
-                              <h1>Gap-LLO</h1>
-                              <p>(非接触)</p>
-                           </div>
-                        </div>
-                        <div class="span-arrow">
-                           <svg xmlns="http://www.w3.org/2000/svg" width="54.665" height="37" viewBox="0 0 54.665 37">
+                        <div class="features-products">
+                            <div class="contect-feature wow fadeInUp" data-wow-duration="1s">
+                                <div class="cont-featur-img">
+                                    <img class="llo" src="img/Contact-LLO.png" />
+                                </div>
+                                <div class="cont-des">
+                                    <h1>Contact-LLO</h1>
+                                    <p>(接触)</p>
+                                </div>
+                            </div>
+                            <div class="or">or</div>
+                            <div class="contect-feature wow fadeInUp" data-wow-duration="1s">
+                                <div class="cont-featur-img">
+                                    <img class="gapllo" src="img/Gap-LLO.png" />
+                                </div>
+                                <div class="cont-des">
+                                    <h1>Gap-LLO</h1>
+                                    <p>(非接触)</p>
+                                </div>
+                            </div>
+                            <div class="span-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="54.665" height="37" viewBox="0 0 54.665 37">
                               <g id="Icon_feather-arrow-right" data-name="Icon feather-arrow-right" transform="translate(-4.836 -3.5)">
                                  <path id="Union_2" data-name="Union 2" d="M606.86-3070.122a2.135,2.135,0,0,1,0-3.005l11.187-11.247H575.714a2.12,2.12,0,0,1-2.114-2.125,2.12,2.12,0,0,1,2.114-2.126h42.333l-11.187-11.247a2.135,2.135,0,0,1,0-3.005,2.105,2.105,0,0,1,2.989,0l14.766,14.845a2.134,2.134,0,0,1,.207.231l0,.006.024.031.017.023.01.014a2.114,2.114,0,0,1,.293.6h0l.014.048v0c0,.015.008.03.012.045l0,.008.01.042,0,.009.009.042,0,.008c0,.016.006.032.009.048h0a2.147,2.147,0,0,1,0,.751v0c0,.016-.006.032-.009.048l0,.008c0,.015-.006.029-.009.043l0,.008-.01.042,0,.008c0,.015-.008.03-.012.045v0l-.014.048h0a2.109,2.109,0,0,1-.293.6l-.01.014-.017.023-.024.032,0,.005a2.134,2.134,0,0,1-.207.231l-14.766,14.845a2.1,2.1,0,0,1-1.494.622A2.1,2.1,0,0,1,606.86-3070.122Z" transform="translate(-567.264 3108.5)" fill="#969696" stroke="#969696" stroke-linecap="round" stroke-width="3"/>
                               </g>
                            </svg>
+                            </div>
+                            <div class="contect-feature wow fadeInUp" data-wow-duration="1s">
+                                <div class="cont-featur-img">
+                                    <img class="next" src="img/next.png" />
+                                </div>
+                                <div class="cont-des">
+                                    <h1>マイクロLED移送完了</h1>
+                                </div>
+                            </div>
                         </div>
-                        <div class="contect-feature wow fadeInUp" data-wow-duration="1s">
-                           <div class="cont-featur-img">
-                              <img class="next" src="img/next.png"/>
-                           </div>
-                           <div class="cont-des">
-                              <h1>マイクロLED移送完了</h1>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- Features section end -->
-      <!-- Features section start -->
-      <section class="f-next-sec">
-         <div class="container container-site">
+        </div>
+    </section>
+    <!-- Features section end -->
+    <!-- Features section start -->
+    <section class="f-next-sec">
+        <div class="container container-site">
             <div class="row">
-               <div class="col-12">
-                  <div class="fs-h wow fadeInUp" data-wow-duration="1s">
-                     <h1>信越化学グループが提供するプロセス技術と製品群</h1>
-                     <p>Process Technologies and Products provided by Shin-Etsu Chemical Group</p>
-                  </div>
-               </div>
+                <div class="col-12">
+                    <div class="fs-h wow fadeInUp" data-wow-duration="1s">
+                        <h1>信越化学グループが提供するプロセス技術と製品群</h1>
+                        <p>Process Technologies and Products provided by Shin-Etsu Chemical Group</p>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- Features section end -->
-      <!-- process section start -->
-      <section class="process-sec">
-         <div class="container container-site">
+        </div>
+    </section>
+    <!-- Features section end -->
+    <!-- process section start -->
+    <section class="process-sec">
+        <div class="container container-site">
             <div class="row">
-               <div class="col-12">
-                  <div class="process-h wow fadeInUp" data-wow-duration="1s">
-                     <h1>マイクロLEDウエハーからバックプレーンまで、マイクロLEDチップの一貫移送プロセスに対応</h1>
-                  </div>
-               </div>
+                <div class="col-12">
+                    <div class="process-h wow fadeInUp" data-wow-duration="1s">
+                        <h1>マイクロLEDウエハーからバックプレーンまで、マイクロLEDチップの一貫移送プロセスに対応</h1>
+                    </div>
+                </div>
             </div>
             <div class="row">
-               <div class="col-12">
-                  <div class="process-section-mains">
-                     <Div class="process-heading-section">
-                        <div class="preocess">
-                           <p>プロセス</p>
+                <div class="col-12">
+                    <div class="process-section-mains">
+                        <Div class="process-heading-section">
+                            <div class="preocess">
+                                <p>プロセス</p>
+                            </div>
+                            <div class="equpment ">
+                                <p>装置</p>
+                            </div>
+                            <div class="tans-part ">
+                                <p>移送部品</p>
+                            </div>
                         </div>
-                        <div class="equpment ">
-                           <p>装置</p>
-                        </div>
-                        <div class="tans-part ">
-                           <p>移送部品</p>
-                        </div>
-                     </div>
-                     <div class="block-time">
-                        <div class="block-mains">
-                           <div class=" for-mobile">
-                              <div class="preocess">
-                                 <p>プロセス</p>
-                              </div>
-                              <div class="equpment">
-                                 <p>装置</p>
-                              </div>
-                              <div class="tans-part">
-                                 <p>移送部品</p>
-                              </div>
-                           </div>
-                           <div class="equipment-details">
-                              <div class="equipment-heading">
-                                 <p>マイクロLEDチップLLO</p>
-                              </div>
-                              <div class="equipment-images">
-                                 <div class="equipment-top-block">
-                                    <div class="left-block">
-                                       <img src="img/Contact-LLO.png"/>
-                                       <p>Contact-LLO</p>
+                        <div class="block-time">
+                            <div class="block-mains">
+                                <div class=" for-mobile">
+                                    <div class="preocess">
+                                        <p>プロセス</p>
                                     </div>
-                                    <div class="right-block">
-                                       <img src="img/Gap-LLO.png"/>
-                                       <p>Gap-LLO</p>
+                                    <div class="equpment">
+                                        <p>装置</p>
                                     </div>
-                                 </div>
-                                 <div class="contact-lio-btns">
-                                    <div class="c-btn">
-                                       <p>Contact-LLO</p>
-                                       <span>
+                                    <div class="tans-part">
+                                        <p>移送部品</p>
+                                    </div>
+                                </div>
+                                <div class="equipment-details">
+                                    <div class="equipment-heading">
+                                        <p>マイクロLEDチップLLO</p>
+                                    </div>
+                                    <div class="equipment-images">
+                                        <div class="equipment-top-block">
+                                            <div class="left-block">
+                                                <img src="img/Contact-LLO.png" />
+                                                <p>Contact-LLO</p>
+                                            </div>
+                                            <div class="right-block">
+                                                <img src="img/Gap-LLO.png" />
+                                                <p>Gap-LLO</p>
+                                            </div>
+                                        </div>
+                                        <div class="contact-lio-btns">
+                                            <div class="c-btn">
+                                                <p>Contact-LLO</p>
+                                                <span>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="19.861" height="19.859" viewBox="0 0 19.861 19.859">
                                              <path id="Exclusion_1" data-name="Exclusion 1" d="M9.931,19.859a9.929,9.929,0,1,1,9.931-9.929A9.941,9.941,0,0,1,9.931,19.859ZM7.221,5.091V15.923l8.427-5.415L7.221,5.091Z" fill="#fff"/>
                                           </svg>
                                        </span>
-                                    </div>
-                                    <div class="c-btn">
-                                       <p>Gap-LLO</p>
-                                       <span>
+                                            </div>
+                                            <div class="c-btn">
+                                                <p>Gap-LLO</p>
+                                                <span>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="19.861" height="19.859" viewBox="0 0 19.861 19.859">
                                              <path id="Exclusion_1" data-name="Exclusion 1" d="M9.931,19.859a9.929,9.929,0,1,1,9.931-9.929A9.941,9.941,0,0,1,9.931,19.859ZM7.221,5.091V15.923l8.427-5.415L7.221,5.091Z" fill="#fff"/>
                                           </svg>
                                        </span>
-                                    </div>
-                                    <div class="c-btn">
-                                       <p>ピッチ変換を伴うGap-LLO</p>
-                                       <span>
+                                            </div>
+                                            <div class="c-btn">
+                                                <p>ピッチ変換を伴うGap-LLO</p>
+                                                <span>
                                           <svg xmlns="http://www.w3.org/2000/svg" width="19.861" height="19.859" viewBox="0 0 19.861 19.859">
                                              <path id="Exclusion_1" data-name="Exclusion 1" d="M9.931,19.859a9.929,9.929,0,1,1,9.931-9.929A9.941,9.941,0,0,1,9.931,19.859ZM7.221,5.091V15.923l8.427-5.415L7.221,5.091Z" fill="#fff"/>
                                           </svg>
                                        </span>
+                                            </div>
+                                        </div>
                                     </div>
-                                 </div>
-                              </div>
-                              <div class="equip-sec">
-                                 <div class="equip-sec-img"><img src="img/select.png"/></div>
-                                 <p>エキシマレーザー<br>
-                                    マルチレーザーリフトオフ装置
-                                 </p>
-                              </div>
-                              <div class="tran-sec">
-                                 <div class="trans-sec-img"><img src="img/sdqp.png"/></div>
-                                 <p>SQDP</p>
-                              </div>
-                           </div>
+                                    <div class="equip-sec">
+                                        <div class="equip-sec-img"><img src="img/select.png" /></div>
+                                        <p>エキシマレーザー<br> マルチレーザーリフトオフ装置
+                                        </p>
+                                    </div>
+                                    <div class="tran-sec">
+                                        <div class="trans-sec-img"><img src="img/sdqp.png" /></div>
+                                        <p>SQDP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-mains">
+                                <div class=" for-mobile">
+                                    <div class="preocess">
+                                        <p>プロセス</p>
+                                    </div>
+                                    <div class="equpment">
+                                        <p>装置</p>
+                                    </div>
+                                    <div class="tans-part">
+                                        <p>移送部品</p>
+                                    </div>
+                                </div>
+                                <div class="equipment-details">
+                                    <div class="equipment-heading">
+                                        <p>SQRPへ移送</p>
+                                    </div>
+                                    <div class="equipment-images">
+                                        <div class="equipment-top-block">
+                                            <img class="img-size" src="img/sqrp-img.png" />
+                                        </div>
+                                        <div class="contact-lio-btns">
+                                            <div class="other-label">
+                                                リリースプレートに移送
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="equip-sec">
+                                        <div class="equip-sec-img">
+                                            <img src="img/p-img-2.png" />
+                                        </div>
+                                        <p>ボンドデボンド装置</p>
+                                    </div>
+                                    <div class="tran-sec">
+                                        <div class="trans-sec-img"><img src="img/sdqp.png" /></div>
+                                        <p>SQDP</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-mains">
+                                <div class=" for-mobile">
+                                    <div class="preocess">
+                                        <p>プロセス</p>
+                                    </div>
+                                    <div class="equpment">
+                                        <p>装置</p>
+                                    </div>
+                                    <div class="tans-part">
+                                        <p>移送部品</p>
+                                    </div>
+                                </div>
+                                <div class="equipment-details">
+                                    <div class="equipment-heading">
+                                        <p>SQDP-Gへ<br> マストランスファー
+                                        </p>
+                                    </div>
+                                    <div class="equipment-images">
+                                        <div class="equipment-top-block">
+                                            <img class="img-size" src="img/soar.png" />
+                                        </div>
+                                        <div class="contact-lio-btns">
+                                            <div class="other-label ht">
+                                                大型ドナープレートに<br> 高速マストランスファー
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="equip-sec">
+                                        <div class="equip-sec-img">
+                                            <img src="img/p-img-2.png" />
+                                        </div>
+                                        <p>ボンドデボンド装置</p>
+                                    </div>
+                                    <div class="tran-sec">
+                                        <div class="img-last-sec">
+                                            <img src="img/p-3.png" />
+                                            <p>EZ-PETAMP-Dot</p>
+                                        </div>
+                                        <div class="img-last-sec">
+                                            <img src="img/p-1.png" />
+                                            <p>EZ-PETAMP-Flat</p>
+                                        </div>
+                                        <div class="img-last-sec">
+                                            <img src="img/p-2.png" />
+                                            <p>EZ-PETAMP-Large</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-mains">
+                                <div class=" for-mobile">
+                                    <div class="preocess">
+                                        <p>プロセス</p>
+                                    </div>
+                                    <div class="equpment">
+                                        <p>装置</p>
+                                    </div>
+                                    <div class="tans-part">
+                                        <p>移送部品</p>
+                                    </div>
+                                </div>
+                                <div class="equipment-details">
+                                    <div class="equipment-heading">
+                                        <p>バックプレーンへの<br>移送</p>
+                                    </div>
+                                    <div class="equipment-images">
+                                        <div class="equipment-top-block fled">
+                                            <img class="img-size" src="img/プロセス.png" />
+                                            <p>バックプレーンに移送</p>
+                                        </div>
+                                        <div class="contact-lio-btns">
+                                            <div class="other-label">
+                                                EZ-PETAMP-Flat
+                                            </div>
+                                            <div class="other-label">
+                                                EZ-PETAMP-Dot
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="equip-sec">
+                                    </div>
+                                    <div class="tran-sec">
+                                        <div class="trans-sec-img"><img src="img/abc.png" /></div>
+                                        <p>SQDP-G</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="block-mains">
+                                <div class=" for-mobile">
+                                    <div class="preocess">
+                                        <p>プロセス</p>
+                                    </div>
+                                    <div class="equpment">
+                                        <p>装置</p>
+                                    </div>
+                                    <div class="tans-part">
+                                        <p>移送部品</p>
+                                    </div>
+                                </div>
+                                <div class="equipment-details">
+                                    <div class="equipment-heading last-row">
+                                        <p>マイクロLEDチップリペア</p>
+                                    </div>
+                                    <div class="equipment-images last-row">
+                                        <div class="equipment-top-block">
+                                            <img class="img-size" src="img/last.png" />
+                                        </div>
+                                        <div class="contact-lio-btns">
+                                            <div class="other-label ht">
+                                                ドナープレート（SQDPシリーズ）上のリペア
+                                            </div>
+                                            <div class="other-label ht">
+                                                ドナープレート（SQDPシリーズ） 上のリペアピクセルピッチ変換後
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="equip-sec last-row">
+                                        <div class="equip-sec-img">
+                                            <img src="img/select.png" />
+                                        </div>
+                                        <p>エキシマレーザー 高速リペア装置 （トリミング/リペア装置）
+                                        </p>
+                                    </div>
+                                    <div class="tran-sec last-row">
+                                        <div class="img-last-sec">
+                                            <img src="img/EZ-PETAM-1Dot.png" />
+                                            <p>EZ-PETAMP-1Dot</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="block-mains">
-                           <div class=" for-mobile">
-                              <div class="preocess">
-                                 <p>プロセス</p>
-                              </div>
-                              <div class="equpment">
-                                 <p>装置</p>
-                              </div>
-                              <div class="tans-part">
-                                 <p>移送部品</p>
-                              </div>
-                           </div>
-                           <div class="equipment-details">
-                              <div class="equipment-heading">
-                                 <p>SQRPへ移送</p>
-                              </div>
-                              <div class="equipment-images">
-                                 <div class="equipment-top-block">
-                                    <img class="img-size" src="img/sqrp-img.png"/>
-                                 </div>
-                                 <div class="contact-lio-btns">
-                                    <div class="other-label">
-                                       リリースプレートに移送
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="equip-sec">
-                                 <div class="equip-sec-img">
-                                    <img src="img/p-img-2.png"/>
-                                 </div>
-                                 <p>ボンドデボンド装置</p>
-                              </div>
-                              <div class="tran-sec">
-                                 <div class="trans-sec-img"><img src="img/sdqp.png"/></div>
-                                 <p>SQDP</p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="block-mains">
-                           <div class=" for-mobile">
-                              <div class="preocess">
-                                 <p>プロセス</p>
-                              </div>
-                              <div class="equpment">
-                                 <p>装置</p>
-                              </div>
-                              <div class="tans-part">
-                                 <p>移送部品</p>
-                              </div>
-                           </div>
-                           <div class="equipment-details">
-                              <div class="equipment-heading">
-                                 <p>SQDP-Gへ<br>
-                                    マストランスファー
-                                 </p>
-                              </div>
-                              <div class="equipment-images">
-                                 <div class="equipment-top-block">
-                                    <img class="img-size" src="img/soar.png"/>
-                                 </div>
-                                 <div class="contact-lio-btns">
-                                    <div class="other-label ht">
-                                       大型ドナープレートに<br>
-                                       高速マストランスファー
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="equip-sec">
-                                 <div class="equip-sec-img">
-                                    <img src="img/p-img-2.png"/>
-                                 </div>
-                                 <p>ボンドデボンド装置</p>
-                              </div>
-                              <div class="tran-sec">
-                                 <div class="img-last-sec">
-                                    <img src="img/p-3.png"/>
-                                    <p>EZ-PETAMP-Dot</p>
-                                 </div>
-                                 <div class="img-last-sec">
-                                    <img src="img/p-1.png"/>
-                                    <p>EZ-PETAMP-Flat</p>
-                                 </div>
-                                 <div class="img-last-sec">
-                                    <img src="img/p-2.png"/>
-                                    <p>EZ-PETAMP-Large</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="block-mains">
-                           <div class=" for-mobile">
-                              <div class="preocess">
-                                 <p>プロセス</p>
-                              </div>
-                              <div class="equpment">
-                                 <p>装置</p>
-                              </div>
-                              <div class="tans-part">
-                                 <p>移送部品</p>
-                              </div>
-                           </div>
-                           <div class="equipment-details">
-                              <div class="equipment-heading">
-                                 <p>バックプレーンへの<br>移送</p>
-                              </div>
-                              <div class="equipment-images">
-                                 <div class="equipment-top-block fled">
-                                    <img class="img-size" src="img/プロセス.png"/>
-                                    <p>バックプレーンに移送</p>
-                                 </div>
-                                 <div class="contact-lio-btns">
-                                    <div class="other-label">
-                                       EZ-PETAMP-Flat
-                                    </div>
-                                    <div class="other-label">
-                                       EZ-PETAMP-Dot
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="equip-sec">
-                              </div>
-                              <div class="tran-sec">
-                                 <div class="trans-sec-img"><img src="img/abc.png"/></div>
-                                 <p>SQDP-G</p>
-                              </div>
-                           </div>
-                        </div>
-                        <div class="block-mains">
-                           <div class=" for-mobile">
-                              <div class="preocess">
-                                 <p>プロセス</p>
-                              </div>
-                              <div class="equpment">
-                                 <p>装置</p>
-                              </div>
-                              <div class="tans-part">
-                                 <p>移送部品</p>
-                              </div>
-                           </div>
-                           <div class="equipment-details">
-                              <div class="equipment-heading last-row">
-                                 <p>マイクロLEDチップリペア</p>
-                              </div>
-                              <div class="equipment-images last-row">
-                                 <div class="equipment-top-block">
-                                    <img class="img-size" src="img/last.png"/>
-                                 </div>
-                                 <div class="contact-lio-btns">
-                                    <div class="other-label ht">
-                                       ドナープレート（SQDPシリーズ）上のリペア
-                                    </div>
-                                    <div class="other-label ht">
-                                       ドナープレート（SQDPシリーズ）
-                                       上のリペアピクセルピッチ変換後
-                                    </div>
-                                 </div>
-                              </div>
-                              <div class="equip-sec last-row">
-                                 <div class="equip-sec-img">
-                                    <img src="img/select.png"/>
-                                 </div>
-                                 <p>エキシマレーザー
-                                    高速リペア装置
-                                    （トリミング/リペア装置）
-                                 </p>
-                              </div>
-                              <div class="tran-sec last-row">
-                                 <div class="img-last-sec">
-                                    <img src="img/EZ-PETAM-1Dot.png"/>
-                                    <p>EZ-PETAMP-1Dot</p>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- process section end -->
-      <!-- last banner section start -->
-      <section class="last-banner">
-         <div class="container container-site">
+        </div>
+    </section>
+    <!-- process section end -->
+    <!-- last banner section start -->
+    <section class="last-banner">
+        <div class="container container-site">
             <div class="row">
-               <div class="col-md-4">
-                  <div class="process-banner wow fadeInUp" data-wow-duration="1s">
-                    <a href="javascript:;">
-                     <div class="pro-heading">
-                       <h1><color>【動画で見る】</color>信越化学が提供する</h1>
-                       <h2>マイクロLED製造一貫プロセス</h2>
-                       <p>【Watch in Video】Learn Shin-Etsu<br>
-Micro LED Chip Transfer Technologies</p>
-                     </div>
-                   </a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="product-banner wow fadeInUp" data-wow-duration="1s">
-                    <a href="javascript:;">
-                      <div class="product-banner-detial">
-                        <div class="p-image">
-                          <img src="img/baner-2img.png">
-                        </div>
-                        <div class="p-detail">
-                          <h1>製品情報</h1>
-                          <p> Products</p>
-                        </div>
-                      </div>
-                    </a>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="contact-banner wow fadeInUp" data-wow-duration="1s">
-                    <a href="javascript:;">
-                       <div class="contact-detail">
-                         <h1>お問い合わせ</h1>
-                         <p>Contact</p>
-                       </div>
-                     </a>
-                  </div>
-               </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="process-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="pro-heading">
+                                <h1>
+                                    <color>【動画で見る】</color>信越化学が提供する</h1>
+                                <h2>マイクロLED製造一貫プロセス</h2>
+                                <p>【Watch in Video】Learn Shin-Etsu<br> Micro LED Chip Transfer Technologies</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="product-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="product-banner-detial">
+                                <div class="p-image">
+                                    <img src="img/baner-2img.png">
+                                </div>
+                                <div class="p-detail">
+                                    <h1>製品情報</h1>
+                                    <p> Products</p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="contact-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="contact-detail">
+                                <h1>お問い合わせ</h1>
+                                <p>Contact</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- last banner section end -->
-      <!-- footer section start -->
-      <section class="footer-section">
-         <div class="container container-site">
+        </div>
+    </section>
+    <!-- last banner section end -->
+    <!-- footer section start -->
+    <section class="footer-section">
+        <div class="container container-site">
             <div class="row">
-               <div class="col-12">
-                  <div class="f-detail">
-                     <ul>
-                        <li><a href="javascript:;">HOME</a></li>
-                        <li><a href="javascript:;">【動画で見る】信越化学が提供するマイクロLED製造一貫プロセス</a></li>
-                        <li><a href="javascript:;">製品情報</a></li>
-                        <li><a href="javascript:;" class="b-none">お問い合わせ</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="f-sub-section">
-                     <ul>
-                        <li>
-                           <a href="javascript:;">
-                              <span>
+                <div class="col-12">
+                    <div class="f-detail">
+                        <ul>
+                            <li><a href="javascript:;">HOME</a></li>
+                            <li><a href="javascript:;">【動画で見る】信越化学が提供するマイクロLED製造一貫プロセス</a></li>
+                            <li><a href="javascript:;">製品情報</a></li>
+                            <li><a href="javascript:;" class="b-none">お問い合わせ</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="f-sub-section">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
                                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                     <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M6.562.562a6,6,0,1,1-6,6A6,6,0,0,1,6.562.562Zm-.7,3.474L7.69,5.788H3.272a.579.579,0,0,0-.581.581v.387a.579.579,0,0,0,.581.581H7.69L5.863,9.088a.581.581,0,0,0-.01.83l.266.264a.578.578,0,0,0,.82,0l3.21-3.208a.578.578,0,0,0,0-.82L6.94,2.941a.578.578,0,0,0-.82,0L5.854,3.2a.584.584,0,0,0,.01.832Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
                                  </svg>
                               </span>
-                              <p>個人情報保護ポリシーについて</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="javascript:;">
-                              <span>
+                                    <p>個人情報保護ポリシーについて</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
                                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                     <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M6.562.562a6,6,0,1,1-6,6A6,6,0,0,1,6.562.562Zm-.7,3.474L7.69,5.788H3.272a.579.579,0,0,0-.581.581v.387a.579.579,0,0,0,.581.581H7.69L5.863,9.088a.581.581,0,0,0-.01.83l.266.264a.578.578,0,0,0,.82,0l3.21-3.208a.578.578,0,0,0,0-.82L6.94,2.941a.578.578,0,0,0-.82,0L5.854,3.2a.584.584,0,0,0,.01.832Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
                                  </svg>
                               </span>
-                              <p>信越化学工業ウェブサイトへ</p>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="javascript:;" >
-                              <span>
+                                    <p>信越化学工業ウェブサイトへ</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
                                  <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                                     <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M6.562.562a6,6,0,1,1-6,6A6,6,0,0,1,6.562.562Zm-.7,3.474L7.69,5.788H3.272a.579.579,0,0,0-.581.581v.387a.579.579,0,0,0,.581.581H7.69L5.863,9.088a.581.581,0,0,0-.01.83l.266.264a.578.578,0,0,0,.82,0l3.21-3.208a.578.578,0,0,0,0-.82L6.94,2.941a.578.578,0,0,0-.82,0L5.854,3.2a.584.584,0,0,0,.01.832Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
                                  </svg>
                               </span>
-                              <p>信越グループ マテリアルガイド</p>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-12">
-                  <div class="copyrigth-section">
-                     <p>Copyright © 2001-2021 Shin-Etsu Chemical Co., Ltd. All rights reserved.</p>
-                  </div>
-               </div>
-               <div class="back-top">
-                  <a href="#top" class="back-to-top d-flex align-items-center justify-content-center">
-                     <span>このページの先頭へ</span>
-                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                                    <p>信越グループ マテリアルガイド</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="copyrigth-section">
+                        <p>Copyright © 2001-2021 Shin-Etsu Chemical Co., Ltd. All rights reserved.</p>
+                    </div>
+                </div>
+                <div class="back-top">
+                    <a href="#top" class="back-to-top d-flex align-items-center justify-content-center">
+                        <span>このページの先頭へ</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
                         <path id="Icon_awesome-arrow-circle-up" data-name="Icon awesome-arrow-circle-up" d="M.563,7.563a7,7,0,1,1,7,7A7,7,0,0,1,.563,7.563Zm4.053.816L6.659,6.247V11.4a.676.676,0,0,0,.677.677h.452a.676.676,0,0,0,.677-.677V6.247l2.044,2.131a.678.678,0,0,0,.968.011l.308-.31a.675.675,0,0,0,0-.957L8.042,3.377a.675.675,0,0,0-.957,0L3.337,7.122a.675.675,0,0,0,0,.957l.308.31A.682.682,0,0,0,4.616,8.378Z" transform="translate(-0.563 -0.563)" fill="#333"/>
                      </svg>
-                  </a>
-               </div>
+                    </a>
+                </div>
             </div>
-         </div>
-      </section>
-      <!-- footer section start -->
-      <!-- Option 1: Bootstrap Bundle with Popper -->
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-      <script type="text/javascript" src="js/wow.min.js"></script>
-      <script>
-              new WOW().init();
-              </script>
-   </body>
+        </div>
+    </section>
+    <!-- footer section start -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
 </html>
