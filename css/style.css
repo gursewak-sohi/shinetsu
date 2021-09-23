@@ -79,10 +79,6 @@ button:focus {
     outline: none;
 }
 
-.container-site {
-    max-width: 1225px;
-}
-
 .row.gx-30 {
     --bs-gutter-x: 30px;
 }
@@ -122,6 +118,8 @@ button:focus {
 
 .menu-items ul li a:hover {
     color: var(--green);
+    font-family: 'yumedium';
+    font-weight: 500;
 }
 
 .icon-svg {
@@ -165,7 +163,7 @@ button:focus {
     color: var( --white);
     text-shadow: 0 3px 10px #143888;
     font-size: 50px;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
 }
 
@@ -180,7 +178,7 @@ button:focus {
 .banner-content-right-content p {
     margin-bottom: 0;
     font-size: 16px;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
     padding-left: 45px;
     line-height: 32px;
@@ -232,7 +230,7 @@ button:focus {
     color: var(--darkgray);
     font-size: 36px;
     font-weight: bold;
-    font-family: "yubold"
+    font-family: 'yubold', sans-serif;
 }
 
 .whats-news-heading h2 {
@@ -240,7 +238,7 @@ button:focus {
     font-size: 16px;
     font-weight: bold;
     margin-top: 10px;
-    font-family: "yubold"
+    font-family: 'yubold', sans-serif;
 }
 
 .news-section {
@@ -273,7 +271,7 @@ button:focus {
     margin-right: 24px;
     color: var(--white);
     border-radius: 3px;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold
 }
 
@@ -383,7 +381,7 @@ button:focus {
 .f-lsit-left h1 {
     color: var(--white);
     font-size: 36px;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
 }
 
@@ -407,7 +405,7 @@ button:focus {
     font-size: 22px;
     margin-bottom: 20px;
     color: var(--green);
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
 }
 
@@ -433,7 +431,7 @@ button:focus {
     font-size: 25px;
     color: var(--green);
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .f-heading-sub-heading h1 span {
@@ -476,7 +474,7 @@ button:focus {
     margin-top: 15px;
     color: var(--darkgray);
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .cont-des p {
@@ -513,14 +511,14 @@ button:focus {
     margin-bottom: 10px;
     color: var(--darkgray);
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .fs-h p {
     font-size: 16px;
     color: var(--green);
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .process-sec {
@@ -533,7 +531,7 @@ button:focus {
     text-align: center;
     color: var(--darkgray);
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .process-section-mains {
@@ -561,7 +559,7 @@ button:focus {
     font-size: 21px;
     color: var(--white);
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .equpment {
@@ -697,7 +695,7 @@ button:focus {
     font-size: 14px;
     padding-left: 10px;
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .c-btn span {
@@ -743,7 +741,7 @@ button:focus {
     padding-left: 10px;
     line-height: 18px;
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     display: flex;
     align-items: center;
 }
@@ -753,7 +751,7 @@ button:focus {
     text-align: center;
     font-weight: bold;
     font-weight: bold;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-size: 20px;
 }
 
@@ -907,7 +905,7 @@ button:focus {
     color: #FFE100;
     text-shadow: 0 3px 10px #143888;
     font-size: 27px;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
 }
 
@@ -929,7 +927,7 @@ button:focus {
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .process-banner a {
@@ -967,7 +965,7 @@ button:focus {
     font-weight: bold;
     color: var(--darkgray);
     text-align: center;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
 }
 
 .pro-heading h2 {
@@ -975,7 +973,7 @@ button:focus {
     margin-top: 5px;
     color: var(--darkgray);
     text-align: center;
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
 }
 
@@ -987,7 +985,7 @@ button:focus {
     font-size: 12px;
     text-align: center;
     color: var(--green);
-    font-family: "yubold";
+    font-family: 'yubold', sans-serif;
     font-weight: bold;
 }
 
@@ -1032,7 +1030,7 @@ button:focus {
     color: #333333;
     font-size: 22px;
     font-weight: bold;
-    font-family: "yubold"
+    font-family: 'yubold', sans-serif;
 }
 
 .p-detail p {
@@ -1042,7 +1040,7 @@ button:focus {
     font-weight: bold;
     margin-top: 7px;
     font-weight: bold;
-    font-family: "yubold"
+    font-family: 'yubold', sans-serif;
 }
 
 .contact-banner {
@@ -1073,7 +1071,7 @@ button:focus {
     color: #333333;
     font-size: 22px;
     font-weight: bold;
-    font-family: "yubold"
+    font-family: 'yubold', sans-serif;
 }
 
 .contact-detail p {
@@ -1081,7 +1079,7 @@ button:focus {
     font-size: 12px;
     font-weight: bold;
     margin-top: 7px;
-    font-family: "yubold"
+    font-family: 'yubold', sans-serif;
 }
 
 .contact-detail {
@@ -1095,6 +1093,10 @@ button:focus {
     background-color: #ececec;
 }
 
+.container-site {
+    max-width: 1225px;
+}
+
 @media (max-width: 1200px) {}
 
 @media (min-width: 1400px) {
@@ -1104,6 +1106,9 @@ button:focus {
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .p-image img {
+        width: 109px;
+    }
     .navbar-brand {
         margin-left: 0;
     }
@@ -1117,6 +1122,53 @@ button:focus {
     .other-label {
         width: 225px;
         font-size: 13px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-brand img {
+        width: 250px;
+    }
+    .news-section {
+        max-width: 100%;
+    }
+    .other-label.ht {
+        height: auto;
+    }
+    .menu-items ul li {
+        margin-right: 0;
+        margin-top: 20px;
+    }
+    .search-bar input {
+        width: 100%;
+    }
+    .video-section {
+        padding-bottom: 72.25%;
+    }
+    .other-label {
+        width: 234px;
+    }
+    .process-banner {
+        transition: 0.3s all;
+        width: 100%;
+        background-size: cover;
+        margin-bottom: 20px;
+    }
+    .process-banner:hover {
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
+    }
+    .product-banner {
+        margin-bottom: 20px;
+    }
+    .p-detail {
+        width: 50%;
+        text-align: center;
+    }
+    .p-image {
+        width: 50%;
+    }
+    .contact-banner {
+        background-size: cover;
     }
 }
 
@@ -1167,13 +1219,13 @@ button:focus {
     .banner-content-bg-image img {
         width: 100%;
         object-fit: cover;
-        padding-bottom: 30px;
+        padding-bottom: 0px;
     }
     .banner-content-bg-image {
         width: 100%;
     }
     .banner-content-right-content {
-        padding-bottom: 10px;
+        padding: 30px;
     }
     .video-section {
         padding-bottom: 96.25%;
@@ -1242,62 +1294,32 @@ button:focus {
         flex-direction: row;
         margin-bottom: 10px;
     }
-}
-
-@media (max-width: 991px) {
-    .navbar-brand img {
-        width: 250px;
+    .f-detail ul {
+        display: flex;
+        flex-direction: column;
     }
-    .news-section {
-        max-width: 100%;
-    }
-    .other-label.ht {
-        height: auto;
-    }
-    .menu-items ul li {
-        margin-right: 0;
-        margin-top: 20px;
-    }
-    .search-bar input {
-        width: 100%;
-    }
-    .video-section {
-        padding-bottom: 72.25%;
-    }
-    .other-label {
-        width: 234px;
-    }
-    .process-banner {
-        transition: 0.3s all;
-        width: 100%;
-        background-size: cover;
-        margin-bottom: 20px;
-    }
-    .process-banner:hover {
-        box-shadow: rgba(0, 0, 0, 0.2) 0px 5px 15px;
-    }
-    .product-banner {
-        margin-bottom: 20px;
-    }
-    .p-detail {
-        width: 50%;
-        text-align: center;
-    }
-    .p-image {
-        width: 50%;
-    }
-    .contact-banner {
-        background-size: cover;
+    .f-detail ul li a {
+        border-right: none;
     }
 }
 
 @media (max-width: 767px) {
+    .features-products {
+        flex-direction: column;
+    }
+    .contect-feature {
+        padding: 0 10px 0 11px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 65px;
+    }
     .row.gx-30 {
         --bs-gutter-x: 0;
     }
     .other-label.ht {
         height: auto;
-        width: 210px;
+        width: 330px;
     }
     .equipment-heading {
         width: 100%;
@@ -1341,10 +1363,17 @@ button:focus {
         left: 34px;
     }
     .or {
-        display: none;
+        display: block;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 30px;
     }
     .span-arrow {
-        display: none;
+        display: block;
+        text-align: center;
+        margin-top: 0;
+        margin-bottom: 25px;
+        transform: rotateZ(90deg);
     }
     .features-products {
         max-width: 100%;
@@ -1441,8 +1470,16 @@ button:focus {
 }
 
 @media (max-width: 575px) {
+    .f-heading-sub-heading {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: 10px;
+    }
     .navbar-brand img {
-        width: 300px;
+        width: 277px;
+    }
+    .f-heading-sub-heading p {
+        padding-left: 0;
     }
     .navbar-brand {
         margin-left: 0px;
@@ -1507,7 +1544,7 @@ button:focus {
         text-align: center;
         margin-top: 0;
         margin-bottom: 15px;
-        font-size: 33px;
+        font-size: 59px;
     }
     .span-arrow {
         display: block;
