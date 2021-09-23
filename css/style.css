@@ -9,8 +9,8 @@
 
 @font-face {
     font-family: 'yumedium';
-    src: url('../font/YuGo-Medium-AlphaNum.eot');
-    src: url('../font/YuGo-Medium-AlphaNum.eot?#iefix') format('embedded-opentype'), url('../font/YuGo-Medium-AlphaNum.woff2') format('woff2'), url('../font/YuGo-Medium-AlphaNum.woff') format('woff'), url('../font/YuGo-Medium-AlphaNum.ttf') format('truetype'), url('../font/YuGo-Medium-AlphaNum.svg#YuGo-Medium-AlphaNum') format('svg');
+    src: url('../font/YuGothic-Medium.eot');
+    src: url('../font/YuGothic-Medium.eot?#iefix') format('embedded-opentype'), url('../font/YuGothic-Medium.woff2') format('woff2'), url('../font/YuGothic-Medium.woff') format('woff'), url('../font/YuGothic-Medium.ttf') format('truetype'), url('../font/YuGothic-Medium.svg#YuGothic-Medium') format('svg');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -114,12 +114,12 @@ button:focus {
     justify-content: center;
     font-size: 16px;
     padding: 5px 17px 5px 17px !important;
+    font-family: 'yumedium';
+    font-weight: 500;
 }
 
 .menu-items ul li a:hover {
     color: var(--green);
-    font-family: 'yumedium';
-    font-weight: 500;
 }
 
 .icon-svg {
@@ -137,7 +137,7 @@ button:focus {
     background-color: #F7F7F7;
     border: none;
     font-size: 14px;
-    padding-left: 22px;
+    padding-left: 27px;
     width: 175px;
 }
 
@@ -191,9 +191,9 @@ button:focus {
 
 .video-section {
     position: relative;
-    padding-bottom: 58.25%;
+    padding-bottom: 0;
     padding-top: 25px;
-    height: 0;
+    height: 305px;
 }
 
 .video-section iframe {
@@ -1093,11 +1093,17 @@ button:focus {
     background-color: #ececec;
 }
 
-.container-site {
-    max-width: 1225px;
+@media (min-width: 1300px) {
+    .container-site {
+        max-width: 1225px;
+    }
 }
 
-@media (max-width: 1200px) {}
+@media (max-width: 1300px) {
+    .navbar-brand {
+        margin-left: 0px;
+    }
+}
 
 @media (min-width: 1400px) {
     .container-site {
@@ -1105,19 +1111,13 @@ button:focus {
     }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
     .p-image img {
         width: 109px;
     }
     .navbar-brand {
-        margin-left: 0;
-    }
-    .navbar-brand img {
-        width: 275px;
+        width: 180px;
         overflow: hidden;
-    }
-    .video-section {
-        padding-bottom: 72.25%;
     }
     .other-label {
         width: 225px;
@@ -1126,9 +1126,6 @@ button:focus {
 }
 
 @media (max-width: 991px) {
-    .navbar-brand img {
-        width: 250px;
-    }
     .news-section {
         max-width: 100%;
     }
@@ -1141,9 +1138,6 @@ button:focus {
     }
     .search-bar input {
         width: 100%;
-    }
-    .video-section {
-        padding-bottom: 72.25%;
     }
     .other-label {
         width: 234px;
@@ -1172,15 +1166,12 @@ button:focus {
     }
 }
 
-@media only screen and (min-width: 768px) and (max-width: 990px) {
+@media only screen and (min-width: 768px) and (max-width: 991px) {
     .features-products {
         max-width: 100%;
         flex-direction: column;
         justify-content: center;
         align-content: center;
-    }
-    .video-section {
-        padding-bottom: 96.25%;
     }
     .contect-feature {
         display: flex;
@@ -1207,9 +1198,6 @@ button:focus {
     .f-sub-section ul li a p {
         font-size: 13px;
     }
-    .navbar-brand img {
-        width: 320px;
-    }
     .navbar-brand {
         margin-left: 0;
     }
@@ -1226,9 +1214,6 @@ button:focus {
     }
     .banner-content-right-content {
         padding: 30px;
-    }
-    .video-section {
-        padding-bottom: 96.25%;
     }
     .banner-content-div {
         display: flex;
@@ -1448,7 +1433,7 @@ button:focus {
         border: none;
     }
     .navbar-brand img {
-        width: 320px;
+        width: 350px;
     }
     .banner-content-div {
         flex-direction: column;
@@ -1475,14 +1460,15 @@ button:focus {
         padding-right: 15px;
         margin-top: 10px;
     }
-    .navbar-brand img {
-        width: 277px;
-    }
     .f-heading-sub-heading p {
         padding-left: 0;
     }
     .navbar-brand {
-        margin-left: 0px;
+        width: 151px;
+        overflow: hidden;
+    }
+    .equipment-heading {
+        height: 110px;
     }
     .banner-content-bg-image img {
         width: 100%;
