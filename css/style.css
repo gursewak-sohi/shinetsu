@@ -219,7 +219,7 @@ button:focus {
 }
 
 .whats-news {
-    padding-top: 50px;
+    padding-top: 55px;
 }
 
 .whats-news-heading {
@@ -336,7 +336,7 @@ button:focus {
 }
 
 .feature-listing {
-    margin-top: 65px;
+    margin-top: 55px;
 }
 
 .feature-listing ul {
@@ -922,7 +922,7 @@ button:focus {
 
 .block-1 h1 {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
     text-align: center;
     width: 100%;
@@ -1092,7 +1092,21 @@ button:focus {
 .load-more-news button:hover {
     background-color: #ececec;
 }
-
+.banner-content-bg-image {
+    position: relative;
+}
+.headin-first p {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    font-family: 'yubold', sans-serif;
+    font-weight: bold;
+    color: var(--white);
+    font-size: 17px;
+}
+.trans-sec-img img {
+    max-width: 170px;
+}
 @media (min-width: 1300px) {
     .container-site {
         max-width: 1225px;
@@ -1117,7 +1131,7 @@ button:focus {
     }
     .navbar-brand {
         width: 180px;
-        overflow: hidden;
+
     }
     .other-label {
         width: 225px;
@@ -1286,6 +1300,12 @@ button:focus {
     .f-detail ul li a {
         border-right: none;
     }
+    .headin-first p {
+    position: absolute;
+    right: 50%;
+    left: 0;
+    width: 100%;
+}
 }
 
 @media (max-width: 767px) {
@@ -1452,6 +1472,12 @@ button:focus {
     .navbar-brand {
         margin-left: 0;
     }
+    .headin-first p {
+    position: absolute;
+    right: 50%;
+    left: 0;
+    width: 100%;
+}
 }
 
 @media (max-width: 575px) {
@@ -1479,7 +1505,7 @@ button:focus {
         padding-top: 0px !important;
     }
     .banner-heading h1 {
-        font-size: 31px;
+        font-size: 24px;
     }
     .banner-section {
         padding-top: 105px;
@@ -1595,4 +1621,47 @@ button:focus {
     .row.gx-30 {
         --bs-gutter-x: 0;
     }
+    .banner-hding h1{
+      font-size: 17px;
+    }
+    .block-1 h1 {
+
+    font-size: 12px;
+  }
+  .for-mobile {
+      width: 20%;
+  }
+
+.preocess p {
+    font-size: 17px;
+  }
+  .equpment p {
+    font-size: 17px;
+  }
+  .tans-part p {
+    font-size: 17px;
+  }
+  .preocess {
+    height: 340px;
+}
+.f-detail ul li a {
+    padding: 0;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+}
+.headin-first p {
+    right: 50%;
+    left: 0;
+    bottom: 20px;
+    width: 100%;
+}
+}
+@media (max-width: 360px) {
+  .preocess p {
+    font-size: 14px;
+}
+.equpment p {
+    font-size: 15px;
+}
 }
