@@ -2147,13 +2147,14 @@ button:focus {
     font-family: 'yubold', sans-serif;
     font-weight: bold;
     background-image: linear-gradient( 70deg, #FFE100 30%, /* font color */
-    #F00 50%, #FFE100 30%/* font color */
+    #F00F00 50%, #FFE100 30%/* font color */
     );
     background-size: 500% 100%;
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
     animation: shine 1.5s infinite;
+    text-shadow: none;
 }
 
 .navbar-toggler-icon img {
