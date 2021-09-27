@@ -28,6 +28,7 @@
 body {
     font-family: 'yubold', sans-serif;
     color: #333333;
+    overflow-x: hidden;
 }
 
 :root {
@@ -1134,6 +1135,7 @@ width: 100%;
     color: var(--white);
     font-family: 'yumedium';
       font-weight: 500;
+      white-space: nowrap;
 
 }
 .breadcrum-heading span {
@@ -1145,6 +1147,7 @@ width: 100%;
     font-size: 14px;
 
     color: var(--white);
+    white-space: nowrap;
 }
 .product-inner-banner {
     background-color: #DBF1F1;
