@@ -1,6 +1,7 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html>
+
+<head>
     <!-- Required meta tags -->
     <title>Shinetsu
     </title>
@@ -11,1209 +12,1150 @@
     <link rel="stylesheet" href="css/animate.css" type="text/css">
     <link href="css/style.css" rel="stylesheet">
     <style>
-      .page-loading {
-        position: fixed;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
-        background-color: #fff;
-        opacity: 0;
-        visibility: hidden;
-        z-index: 9999;
-      }
-      .page-loading.active {
-        opacity: 1;
-        visibility: visible;
-      }
-      .page-loading-inner {
-        position: absolute;
-        top: 50%;
-        left: 0;
-        width: 100%;
-        text-align: center;
-        -webkit-transform: translateY(-50%);
-        transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
-        opacity: 0;
-      }
-      .page-loading.active>.page-loading-inner {
-        opacity: 1;
-      }
-      .page-loading-inner>span {
-        display: block;
-        font-family: 'Inter', sans-serif;
-        font-size: 1rem;
-        font-weight: normal;
-        color: #009B94;
-      }
-      .page-spinner {
-        display: inline-block;
-        width: 2.75rem;
-        height: 2.75rem;
-        margin-bottom: .75rem;
-        vertical-align: text-bottom;
-        border: .15em solid #009B94;
-        border-right-color: transparent;
-        border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
-      }
-      @-webkit-keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
         }
-      }
-      @keyframes spinner {
-        100% {
-          -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+        
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
         }
-      }
+        
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        
+        .page-loading-inner>span {
+            display: block;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #009B94;
+        }
+        
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #009B94;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
     </style>
     <!-- Page loading scripts-->
     <script>
-      (function() {
-        window.onload = function() {
-          var preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
-          setTimeout(function() {
-            preloader.remove();
-          }
-                     , 2000);
-        };
-      }
-      )();
+        (function() {
+            window.onload = function() {
+                var preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function() {
+                    preloader.remove();
+                }, 2000);
+            };
+        })();
     </script>
-  </head>
-  <body id="top">
+</head>
+
+<body id="top">
     <div class="page-loading active">
-      <div class="page-loading-inner">
-        <div class="page-spinner">
-        </div>
-        <span>Loading...
+        <div class="page-loading-inner">
+            <div class="page-spinner">
+            </div>
+            <span>Loading...
         </span>
-      </div>
+        </div>
     </div>
     <!-- Navnar-section -->
     <nav class="navbar main-nav-bar navbar-expand-lg  ">
-      <div class="container container-site">
-        <a class="navbar-brand" href="#">
-          <img src="img/logo.png" />
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container container-site">
+            <a class="navbar-brand" href="#">
+                <img src="img/logo.png" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon">
              <img src="img/menu.svg"/>
           </span>
         </button>
-        <div class="collapse menu-items navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item d-lg-block d-md-none d-sm-none d-xs-none">
-              <a class="nav-link active" aria-current="page" href="#">
-                <div class="icon-svg">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.8" viewBox="0 0 16 12.8">
+            <div class="collapse menu-items navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item d-lg-block d-md-none d-sm-none d-xs-none">
+                        <a class="nav-link active" aria-current="page" href="#">
+                            <div class="icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="12.8" viewBox="0 0 16 12.8">
                     <path id="Icon_awesome-sitemap" data-name="Icon awesome-sitemap" d="M3.2,8.8H.8a.8.8,0,0,0-.8.8V12a.8.8,0,0,0,.8.8H3.2A.8.8,0,0,0,4,12V9.6A.8.8,0,0,0,3.2,8.8Zm-.6-2H7.4V8H8.6V6.8h4.8V8h1.2V6.56a.961.961,0,0,0-.96-.96H8.6V4h1a.8.8,0,0,0,.8-.8V.8A.8.8,0,0,0,9.6,0H6.4a.8.8,0,0,0-.8.8V3.2a.8.8,0,0,0,.8.8h1V5.6H2.36a.961.961,0,0,0-.96.96V8H2.6Zm6.6,2H6.8a.8.8,0,0,0-.8.8V12a.8.8,0,0,0,.8.8H9.2A.8.8,0,0,0,10,12V9.6A.8.8,0,0,0,9.2,8.8Zm6,0H12.8a.8.8,0,0,0-.8.8V12a.8.8,0,0,0,.8.8h2.4A.8.8,0,0,0,16,12V9.6A.8.8,0,0,0,15.2,8.8Z" fill="#009b94"/>
                   </svg>
-                </div>
-                <span>サイトマップ
+                            </div>
+                            <span>サイトマップ
                 </span>
-              </a>
-            </li>
+                        </a>
+                    </li>
 
-            <li class="nav-item d-lg-none d-md-block">
-              <a class="nav-link" href="#">
-                <span>マイクロLED製造一貫プロセス
+                    <li class="nav-item d-lg-none d-md-block">
+                        <a class="nav-link" href="#">
+                            <span>マイクロLED製造一貫プロセス
                 </span>
-              </a>
-            </li>
-            <li class="nav-item d-lg-none d-md-block">
-              <a class="nav-link" href="#">
-                <span>製品情報
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none d-md-block">
+                        <a class="nav-link" href="#">
+                            <span>製品情報
                 </span>
-              </a>
-            </li>
-            <li class="nav-item d-lg-none d-md-block">
-              <a class="nav-link" href="#">
-                <span>お問い合わせ
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none d-md-block">
+                        <a class="nav-link" href="#">
+                            <span>お問い合わせ
                 </span>
-              </a>
-            </li>
-            <li class="nav-item d-lg-none d-md-block">
-              <a class="nav-link" href="#">
-                <span>サイトマップ
+                        </a>
+                    </li>
+                    <li class="nav-item d-lg-none d-md-block">
+                        <a class="nav-link" href="#">
+                            <span>サイトマップ
                 </span>
-              </a>
-            </li>
-            <!-- <li class="nav-item">
-<a class="nav-link" href="#">
-<div class="icon-svg">
-<svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
-<g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-1.5 -1.5)">
-<path id="パス_1" data-name="パス 1" d="M8.708,1.5a7.209,7.209,0,0,1,2.806,13.849A7.209,7.209,0,0,1,5.9,2.067,7.163,7.163,0,0,1,8.708,1.5Zm0,13.1a5.9,5.9,0,1,0-4.17-1.727A5.859,5.859,0,0,0,8.708,14.6Z" transform="translate(0 0)" fill="#009b94"/>
-<path id="パス_2" data-name="パス 2" d="M15.26,17.768H2.155a.634.634,0,1,1,0-1.268h13.1a.635.635,0,1,1,0,1.268Z" transform="translate(0 -8.427)" fill="#009b94"/>
-<path id="パス_3" data-name="パス 3" d="M13.671,1.5a.625.625,0,0,1,.468.213,10.871,10.871,0,0,1,2.7,6.981q0,.014,0,.027a10.871,10.871,0,0,1-2.7,6.981.621.621,0,0,1-.936,0,10.871,10.871,0,0,1-2.7-6.981q0-.014,0-.027a10.871,10.871,0,0,1,2.7-6.981A.625.625,0,0,1,13.671,1.5Zm1.9,7.208a9.564,9.564,0,0,0-1.9-5.536,9.564,9.564,0,0,0-1.9,5.536,9.564,9.564,0,0,0,1.9,5.536A9.564,9.564,0,0,0,15.573,8.708Z" transform="translate(-4.963 0)" fill="#009b94"/>
-</g>
-</svg>
-</div>
-<span>中文</span>
-</a>
-</li> -->
-            <!-- <li class="nav-item">
-<a class="nav-link" href="#">
-<div class="icon-svg">
-<svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
-<g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-1.5 -1.5)">
-<path id="パス_1" data-name="パス 1" d="M8.708,1.5a7.209,7.209,0,0,1,2.806,13.849A7.209,7.209,0,0,1,5.9,2.067,7.163,7.163,0,0,1,8.708,1.5Zm0,13.1a5.9,5.9,0,1,0-4.17-1.727A5.859,5.859,0,0,0,8.708,14.6Z" transform="translate(0 0)" fill="#009b94"/>
-<path id="パス_2" data-name="パス 2" d="M15.26,17.768H2.155a.634.634,0,1,1,0-1.268h13.1a.635.635,0,1,1,0,1.268Z" transform="translate(0 -8.427)" fill="#009b94"/>
-<path id="パス_3" data-name="パス 3" d="M13.671,1.5a.625.625,0,0,1,.468.213,10.871,10.871,0,0,1,2.7,6.981q0,.014,0,.027a10.871,10.871,0,0,1-2.7,6.981.621.621,0,0,1-.936,0,10.871,10.871,0,0,1-2.7-6.981q0-.014,0-.027a10.871,10.871,0,0,1,2.7-6.981A.625.625,0,0,1,13.671,1.5Zm1.9,7.208a9.564,9.564,0,0,0-1.9-5.536,9.564,9.564,0,0,0-1.9,5.536,9.564,9.564,0,0,0,1.9,5.536A9.564,9.564,0,0,0,15.573,8.708Z" transform="translate(-4.963 0)" fill="#009b94"/>
-</g>
-</svg>
-</div>
-<span>繁體字</span>
-</a>
-</li> -->
-<li class="nav-item">
-  <a class="nav-link" href="#">
-    <div class="icon-svg">
-      <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:;" id="switch-lang">
+                            <div class="icon-svg">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14.415" height="14.415" viewBox="0 0 14.415 14.415">
         <g id="Icon_feather-globe" data-name="Icon feather-globe" transform="translate(-1.5 -1.5)">
           <path id="パス_1" data-name="パス 1" d="M8.708,1.5a7.209,7.209,0,0,1,2.806,13.849A7.209,7.209,0,0,1,5.9,2.067,7.163,7.163,0,0,1,8.708,1.5Zm0,13.1a5.9,5.9,0,1,0-4.17-1.727A5.859,5.859,0,0,0,8.708,14.6Z" transform="translate(0 0)" fill="#009b94"/>
           <path id="パス_2" data-name="パス 2" d="M15.26,17.768H2.155a.634.634,0,1,1,0-1.268h13.1a.635.635,0,1,1,0,1.268Z" transform="translate(0 -8.427)" fill="#009b94"/>
           <path id="パス_3" data-name="パス 3" d="M13.671,1.5a.625.625,0,0,1,.468.213,10.871,10.871,0,0,1,2.7,6.981q0,.014,0,.027a10.871,10.871,0,0,1-2.7,6.981.621.621,0,0,1-.936,0,10.871,10.871,0,0,1-2.7-6.981q0-.014,0-.027a10.871,10.871,0,0,1,2.7-6.981A.625.625,0,0,1,13.671,1.5Zm1.9,7.208a9.564,9.564,0,0,0-1.9-5.536,9.564,9.564,0,0,0-1.9,5.536,9.564,9.564,0,0,0,1.9,5.536A9.564,9.564,0,0,0,15.573,8.708Z" transform="translate(-4.963 0)" fill="#009b94"/>
         </g>
       </svg>
-    </div>
-    <span>English
-    </span>
-  </a>
-</li>
-          </ul>
-          <form class="d-flex search-bar">
-            <svg xmlns="http://www.w3.org/2000/svg" width="15.731" height="15.731" viewBox="0 0 15.731 15.731">
+                            </div>
+                            <span lang="jp">English</span>
+                            <span lang="en">日本</span>
+                        </a>
+                    </li>
+                </ul>
+                <form class="d-flex search-bar">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="15.731" height="15.731" viewBox="0 0 15.731 15.731">
               <path id="Icon_map-search" data-name="Icon map-search" d="M12.951,10.858a6.221,6.221,0,1,0-2.094,2.093l4.221,4.221,2.093-2.094Zm-5.3.63a3.838,3.838,0,1,1,3.84-3.836,3.844,3.844,0,0,1-3.84,3.836Z" transform="translate(-1.44 -1.44)" fill="#b2b2b2"/>
             </svg>
-            <input class=" me-0" type="search" aria-label="Search">
-          </form>
+                    <input class=" me-0" type="search" aria-label="Search">
+                </form>
+            </div>
         </div>
-      </div>
     </nav>
     <!-- Navnar-section end -->
     <!-- banner section-->
     <section class="breadcrum-top">
-      <div class="container container container-site">
-        <div class="row">
-          <div class="col-12 over-flow-auto">
-            <div class="breadcrum-heading">
-              <div class="first-heading">ホーム
-              </div>
-              <span>
+        <div class="container container container-site">
+            <div class="row">
+                <div class="col-12 over-flow-auto">
+                    <div class="breadcrum-heading">
+                        <div class="first-heading">ホーム
+                        </div>
+                        <span>
                 <img src="img/right-arrow.svg"/>
               </span>
-              <div class="page-heading">製品情報
-              </div>
-              <span>
+                        <div class="page-heading">製品情報
+                        </div>
+                        <span>
                 <img src="img/right-arrow.svg"/>
               </span>
-              <div class="page-heading">マイクロLEDチップ移送部品
-              </div>
+                        <div class="page-heading">マイクロLEDチップ移送部品
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <!-- banner section end -->
     <!-- product banner start -->
     <section class="product-inner-banner">
-      <div class="container container container-site">
-        <div class="row">
-          <div class="col-12">
-            <div class="main-product-details">
-              <h1>マイクロLEDチップ移送部品
-              </h1>
-              <p>Micro LED Chip Transfer Parts
-              </p>
+        <div class="container container container-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="main-product-details">
+                        <h1>マイクロLEDチップ移送部品
+                        </h1>
+                        <p>Micro LED Chip Transfer Parts
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
     </section>
     <!-- product banner end -->
     <!-- chip-transferlineq start -->
     <section class="chip-transfer">
-      <div class="container container container-site">
-        <div class="row">
-          <div class="col-12">
-            <div class="chip-transfer-heading wow fadeInUp" data-wow-duration="0.5s">
-              <h1>マイクロLEDチップ移送部品 製品ラインアップ
-              </h1>
-              <p>Micro LED Chip Transfer Parts Product Lineup
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12 over-flow-auto">
-            <div class="chip-detail-table">
-              <div class="chip-left-box">
-                <div class="chip-left-box-main">
-                  <div class="chip-box-p-no">
-                    <h1>製品シリーズ
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img">
-                    <h1>製品形状イメージ
-                    </h1>
-                  </div>
-                  <div class="Use">
-                    <h1>用途
-                    </h1>
-                  </div>
-                  <div class="equipment">
-                    <h1>対応設備
-                    </h1>
-                  </div>
-                  <div class="grade">
-                    <h1>代表グレード
-                    </h1>
-                  </div>
-                  <div class="b-size">
-                    <h1>基板サイズ
-                    </h1>
-                  </div>
-                  <div class="v-link">
-                    <h1>動画リンク
-                    </h1>
-                  </div>
-                </div>
-              </div>
-              <div class="chip-right-box">
-                <div class="chip-right-main-box">
-                  <div class=" for-mobile-chip">
-                    <div class="chip-left-box-main">
-                      <div class="chip-box-p-no">
-                        <h1>製品シリーズ
+        <div class="container container container-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="chip-transfer-heading wow fadeInUp" data-wow-duration="0.5s">
+                        <h1>マイクロLEDチップ移送部品 製品ラインアップ
                         </h1>
-                      </div>
-                      <div class="chip-shape-img">
-                        <h1>製品形状イメージ
-                        </h1>
-                      </div>
-                      <div class="Use">
-                        <h1>用途
-                        </h1>
-                      </div>
-                      <div class="equipment">
-                        <h1>対応設備
-                        </h1>
-                      </div>
-                      <div class="grade">
-                        <h1>代表グレード
-                        </h1>
-                      </div>
-                      <div class="b-size">
-                        <h1>基板サイズ
-                        </h1>
-                      </div>
-                      <div class="v-link">
-                        <h1>動画リンク
-                        </h1>
-                      </div>
+                        <p>Micro LED Chip Transfer Parts Product Lineup
+                        </p>
                     </div>
-                  </div>
-                  <div class="chip-right-main-inner">
-                  <div class="chip-box-p-no border-left">
-                    <h1>EZ-PETAMP-Dot
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img border-left">
-                    <span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 over-flow-auto">
+                    <div class="chip-detail-table">
+                        <div class="chip-left-box">
+                            <div class="chip-left-box-main">
+                                <div class="chip-box-p-no">
+                                    <h1>製品シリーズ
+                                    </h1>
+                                </div>
+                                <div class="chip-shape-img">
+                                    <h1>製品形状イメージ
+                                    </h1>
+                                </div>
+                                <div class="Use">
+                                    <h1>用途
+                                    </h1>
+                                </div>
+                                <div class="equipment">
+                                    <h1>対応設備
+                                    </h1>
+                                </div>
+                                <div class="grade">
+                                    <h1>代表グレード
+                                    </h1>
+                                </div>
+                                <div class="b-size">
+                                    <h1>基板サイズ
+                                    </h1>
+                                </div>
+                                <div class="v-link">
+                                    <h1>動画リンク
+                                    </h1>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="chip-right-box">
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>EZ-PETAMP-Dot
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                       <img src="img/chip-p-img.png"/>
                     </span>
-                  </div>
-                  <div class="Use border-left">
-                    <p>チップ移送用
-                      <br>スタンプ
-                    </p>
-                  </div>
-                  <div class="equipment border-left">
-                    <p>チップマウンター
-                    </p>
-                  </div>
-                  <div class="grade border-left">
-                    <p>EZ-PETAMP-109-
-                      <br>
-                      13-D30/B30
-                    </p>
-                  </div>
-                  <div class="b-size border-left">
-                    <p>35mm×35mm
-                      <br>
-                      厚み1.2mm
-                    </p>
-                  </div>
-                  <div class="v-link border-left cs7">
-                    <p>バックプレーン
-                      <br>（小型ディスプレイ）
-                      <br>に移送
-                    </p>
-                    <div class="v-link-btn">
-                      <button class="v-btn">動画準備中
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>チップ移送用
+                                            <br>スタンプ
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>チップマウンター
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>EZ-PETAMP-109-
+                                            <br> 13-D30/B30
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>35mm×35mm
+                                            <br> 厚み1.2mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <p>バックプレーン
+                                            <br>（小型ディスプレイ）
+                                            <br>に移送
+                                        </p>
+                                        <div class="v-link-btn">
+                                            <button class="v-btn">動画準備中
                       </button>
-                    </div>
-                  </div>
-                  </div>
-                </div>
-                <div class="chip-right-main-box">
-                  <div class=" for-mobile-chip">
-                    <div class="chip-left-box-main">
-                      <div class="chip-box-p-no">
-                        <h1>製品シリーズ
-                        </h1>
-                      </div>
-                      <div class="chip-shape-img">
-                        <h1>製品形状イメージ
-                        </h1>
-                      </div>
-                      <div class="Use">
-                        <h1>用途
-                        </h1>
-                      </div>
-                      <div class="equipment">
-                        <h1>対応設備
-                        </h1>
-                      </div>
-                      <div class="grade">
-                        <h1>代表グレード
-                        </h1>
-                      </div>
-                      <div class="b-size">
-                        <h1>基板サイズ
-                        </h1>
-                      </div>
-                      <div class="v-link">
-                        <h1>動画リンク
-                        </h1>
-                      </div>
-                    </div>
-                  </div>
-                    <div class="chip-right-main-inner">
-                  <div class="chip-box-p-no border-left">
-                    <h1>EZ-PETAMP-Flat
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img border-left">
-                    <span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>EZ-PETAMP-Flat
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                       <img src="img/chip-Flat.png"/>
                     </span>
-                  </div>
-                  <div class="Use border-left">
-                    <p>チップ移送用
-                      <br>
-                      スタンプ
-                    </p>
-                  </div>
-                  <div class="equipment border-left">
-                    <p>チップマウンターー
-                    </p>
-                  </div>
-                  <div class="grade border-left">
-                    <p>EZ-PETAMP-109-
-                      <br>
-                      F003
-                    </p>
-                  </div>
-                  <div class="b-size border-left">
-                    <p>30mm×30mm
-                      <br>
-                      厚み1.2mm
-                    </p>
-                  </div>
-                  <div class="v-link border-left cs7">
-                    <p>バックプレーン
-                      <br>
-                      （小型ディスプレイ）
-                    </br>
-                  に移送
-                  </p>
-                <div class="v-link-btn">
-                  <button class="v-btn">動画準備中
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>チップ移送用
+                                            <br> スタンプ
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>チップマウンターー
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>EZ-PETAMP-109-
+                                            <br> F003
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>30mm×30mm
+                                            <br> 厚み1.2mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <p>バックプレーン
+                                            <br> （小型ディスプレイ）
+                                            </br>
+                                            に移送
+                                        </p>
+                                        <div class="v-link-btn">
+                                            <button class="v-btn">動画準備中
                   </button>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div class="chip-right-main-box">
-              <div class=" for-mobile-chip">
-                <div class="chip-left-box-main">
-                  <div class="chip-box-p-no">
-                    <h1>製品シリーズ
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img">
-                    <h1>製品形状イメージ
-                    </h1>
-                  </div>
-                  <div class="Use">
-                    <h1>用途
-                    </h1>
-                  </div>
-                  <div class="equipment">
-                    <h1>対応設備
-                    </h1>
-                  </div>
-                  <div class="grade">
-                    <h1>代表グレード
-                    </h1>
-                  </div>
-                  <div class="b-size">
-                    <h1>基板サイズ
-                    </h1>
-                  </div>
-                  <div class="v-link">
-                    <h1>動画リンク
-                    </h1>
-                  </div>
-                </div>
-              </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
 
-              <div class="chip-right-main-inner">
-              <div class="chip-box-p-no border-left">
-                <h1>EZ-PETAMP-1Dot
-                </h1>
-              </div>
-              <div class="chip-shape-img border-left">
-                <span>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>EZ-PETAMP-1Dot
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                   <img src="img/1Dot.png"/>
                 </span>
-              </div>
-              <div class="Use border-left">
-                <p>リペア用スタンプ
-                </p>
-              </div>
-              <div class="equipment border-left">
-                <p>チップマウンター
-                </p>
-              </div>
-              <div class="grade border-left">
-                <p>EZ-PETAMP-109-
-                  B1
-                </p>
-              </div>
-              <div class="b-size border-left">
-                <p>20mm×20mm
-                  <br>
-                  厚み1.2mm
-                </p>
-              </div>
-              <div class="v-link border-left cs7">
-                <p>バックプレーン上
-                  <br>
-                  のリペア
-                </p>
-                <div class="v-link-btn">
-                  <button class="v-btn">動画準備中
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>リペア用スタンプ
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>チップマウンター
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>EZ-PETAMP-109- B1
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>20mm×20mm
+                                            <br> 厚み1.2mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <p>バックプレーン上
+                                            <br> のリペア
+                                        </p>
+                                        <div class="v-link-btn">
+                                            <button class="v-btn">動画準備中
                   </button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="chip-right-main-box">
-              <div class=" for-mobile-chip">
-                <div class="chip-left-box-main">
-                  <div class="chip-box-p-no">
-                    <h1>製品シリーズ
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img">
-                    <h1>製品形状イメージ
-                    </h1>
-                  </div>
-                  <div class="Use">
-                    <h1>用途
-                    </h1>
-                  </div>
-                  <div class="equipment">
-                    <h1>対応設備
-                    </h1>
-                  </div>
-                  <div class="grade">
-                    <h1>代表グレード
-                    </h1>
-                  </div>
-                  <div class="b-size">
-                    <h1>基板サイズ
-                    </h1>
-                  </div>
-                  <div class="v-link">
-                    <h1>動画リンク
-                    </h1>
-                  </div>
-                </div>
-              </div>
-                <div class="chip-right-main-inner">
-              <div class="chip-box-p-no border-left">
-                <h1>EZ-PETAMP-Large
-                </h1>
-              </div>
-              <div class="chip-shape-img border-left">
-                <span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>EZ-PETAMP-Large
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                   <img src="img/Large.png"/>
                 </span>
-              </div>
-              <div class="Use border-left">
-                <p>チップ移送用M
-                  <br>
-                  大型スタンプ
-                </p>
-              </div>
-              <div class="equipment border-left">
-                <p>チップマウンター
-                </p>
-              </div>
-              <div class="grade border-left">
-                <p>EZ-PETAMP-109-
-                  <br>FL001
-                </p>
-              </div>
-              <div class="b-size border-left">
-                <p>Φ6インチ
-                  <br>
-                  厚み1mm
-                </p>
-              </div>
-              <div class="v-link border-left cs7">
-                <p>4K / 8K モニター
-                  のバックプレーン
-                  への移送
-                </p>
-                <div class="v-link-btn">
-                  <button class="v-btn">動画準備中
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>チップ移送用M
+                                            <br> 大型スタンプ
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>チップマウンター
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>EZ-PETAMP-109-
+                                            <br>FL001
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>Φ6インチ
+                                            <br> 厚み1mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <p>4K / 8K モニター のバックプレーン への移送
+                                        </p>
+                                        <div class="v-link-btn">
+                                            <button class="v-btn">動画準備中
                   </button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="chip-right-main-box">
-              <div class=" for-mobile-chip">
-                <div class="chip-left-box-main">
-                  <div class="chip-box-p-no">
-                    <h1>製品シリーズ
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img">
-                    <h1>製品形状イメージ
-                    </h1>
-                  </div>
-                  <div class="Use">
-                    <h1>用途
-                    </h1>
-                  </div>
-                  <div class="equipment">
-                    <h1>対応設備
-                    </h1>
-                  </div>
-                  <div class="grade">
-                    <h1>代表グレード
-                    </h1>
-                  </div>
-                  <div class="b-size">
-                    <h1>基板サイズ
-                    </h1>
-                  </div>
-                  <div class="v-link">
-                    <h1>動画リンク
-                    </h1>
-                  </div>
-                </div>
-              </div>
-              <div class="chip-right-main-inner">
-              <div class="chip-box-p-no border-left">
-                <h1>ドナープレート
-                  <br>
-                  SQDPシリーズ
-                </h1>
-              </div>
-              <div class="chip-shape-img border-left">
-                <span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>ドナープレート
+                                            <br> SQDPシリーズ
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                   <img src="img/right-image.png"/>
                 </span>
-              </div>
-              <div class="Use border-left">
-                <p>LLO用仮固定
-                  <br>
-                  基板
-                </p>
-              </div>
-              <div class="equipment border-left">
-                <p>LLO装置
-                  <br>
-                  (信越エンジニアリング
-                  株式会社製）
-                </p>
-              </div>
-              <div class="grade border-left">
-                <p>SQDP-204-20-6
-                </p>
-              </div>
-              <div class="b-size border-left">
-                <p>Φ6インチ
-                  厚み1mm
-                </p>
-              </div>
-              <div class="v-link border-left cs7">
-                <div class="other-vieo-link">
-                  <div class="con-lio">
-                    <p>Contact-LLO
-                    </p>
-                    <button class="t-btn">
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>LLO用仮固定
+                                            <br> 基板
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>LLO装置
+                                            <br> (信越エンジニアリング 株式会社製）
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>SQDP-204-20-6
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>Φ6インチ 厚み1mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <div class="other-vieo-link">
+                                            <div class="con-lio">
+                                                <p>Contact-LLO
+                                                </p>
+                                                <button class="t-btn">
                       <span>動画再生
                       </span>
                       <img src="img/Exclusion-svg.svg"/>
                     </button>
-                  </div>
-                  <div class="con-lio">
-                    <p>Gap-LLO
-                    </p>
-                    <button class="t-btn">
+                                            </div>
+                                            <div class="con-lio">
+                                                <p>Gap-LLO
+                                                </p>
+                                                <button class="t-btn">
                       <span>動画再生
                       </span>
                       <img src="img/Exclusion-svg.svg"/>
                     </button>
-                  </div>
-                  <div class="con-lio">
-                    <p>Gap-LLO
-                      <br>ピッチ変換あり
-                    </p>
-                    <button class="t-btn">
+                                            </div>
+                                            <div class="con-lio">
+                                                <p>Gap-LLO
+                                                    <br>ピッチ変換あり
+                                                </p>
+                                                <button class="t-btn">
                       <span>動画再生
                       </span>
                       <img src="img/Exclusion-svg.svg"/>
                     </button>
-                  </div>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="chip-right-main-box">
-              <div class=" for-mobile-chip">
-                <div class="chip-left-box-main">
-                  <div class="chip-box-p-no">
-                    <h1>製品シリーズ
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img">
-                    <h1>製品形状イメージ
-                    </h1>
-                  </div>
-                  <div class="Use">
-                    <h1>用途
-                    </h1>
-                  </div>
-                  <div class="equipment">
-                    <h1>対応設備
-                    </h1>
-                  </div>
-                  <div class="grade">
-                    <h1>代表グレード
-                    </h1>
-                  </div>
-                  <div class="b-size">
-                    <h1>基板サイズ
-                    </h1>
-                  </div>
-                  <div class="v-link">
-                    <h1>動画リンク
-                    </h1>
-                  </div>
-                </div>
-              </div>
-              <div class="chip-right-main-inner">
-              <div class="chip-box-p-no border-left">
-                <h1>大型ドナープレート
-                  <br>
-                  SQDP-Gシリーズ
-                </h1>
-              </div>
-              <div class="chip-shape-img border-left">
-                <span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>大型ドナープレート
+                                            <br> SQDP-Gシリーズ
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                   <img src="img/SQDPchip.png"/>
                 </span>
-              </div>
-              <div class="Use border-left">
-                <p>LLO用仮固定
-                  <br>
-                  大型基板
-                </p>
-              </div>
-              <div class="equipment border-left">
-                <p>マストランスファー
-                  <br>
-                  装置
-                  <br>
-                  (信越エンジニアリング
-                  株式会社製）
-                </p>
-              </div>
-              <div class="grade border-left">
-                <p>SQDP-G224-60-
-                  <br>
-                  3035
-                </p>
-              </div>
-              <div class="b-size border-left">
-                <p>300mm×350mm
-                  <br>
-                  厚み1.1mm
-                </p>
-              </div>
-              <div class="v-link border-left cs7">
-                <p>大型ドナー
-                  プレートに
-                  高速マス
-                  トランスファー
-                </p>
-                <div class="v-link-btn">
-                  <button class="v-btn">動画準備中
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>LLO用仮固定
+                                            <br> 大型基板
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>マストランスファー
+                                            <br> 装置
+                                            <br> (信越エンジニアリング 株式会社製）
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>SQDP-G224-60-
+                                            <br> 3035
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>300mm×350mm
+                                            <br> 厚み1.1mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <p>大型ドナー プレートに 高速マス トランスファー
+                                        </p>
+                                        <div class="v-link-btn">
+                                            <button class="v-btn">動画準備中
                   </button>
-                </div>
-              </div>
-              </div>
-            </div>
-            <div class="chip-right-main-box">
-              <div class=" for-mobile-chip">
-                <div class="chip-left-box-main">
-                  <div class="chip-box-p-no">
-                    <h1>製品シリーズ
-                    </h1>
-                  </div>
-                  <div class="chip-shape-img">
-                    <h1>製品形状イメージ
-                    </h1>
-                  </div>
-                  <div class="Use">
-                    <h1>用途
-                    </h1>
-                  </div>
-                  <div class="equipment">
-                    <h1>対応設備
-                    </h1>
-                  </div>
-                  <div class="grade">
-                    <h1>代表グレード
-                    </h1>
-                  </div>
-                  <div class="b-size">
-                    <h1>基板サイズ
-                    </h1>
-                  </div>
-                  <div class="v-link">
-                    <h1>動画リンク
-                    </h1>
-                  </div>
-                </div>
-              </div>
-                <div class="chip-right-main-inner">
-              <div class="chip-box-p-no border-left">
-                <h1>リリースプレート
-                  <br>
-                  SQRPシリーズ
-                </h1>
-              </div>
-              <div class="chip-shape-img border-left">
-                <span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="chip-right-main-box">
+                                <div class=" for-mobile-chip">
+                                    <div class="chip-left-box-main">
+                                        <div class="chip-box-p-no">
+                                            <h1>製品シリーズ
+                                            </h1>
+                                        </div>
+                                        <div class="chip-shape-img">
+                                            <h1>製品形状イメージ
+                                            </h1>
+                                        </div>
+                                        <div class="Use">
+                                            <h1>用途
+                                            </h1>
+                                        </div>
+                                        <div class="equipment">
+                                            <h1>対応設備
+                                            </h1>
+                                        </div>
+                                        <div class="grade">
+                                            <h1>代表グレード
+                                            </h1>
+                                        </div>
+                                        <div class="b-size">
+                                            <h1>基板サイズ
+                                            </h1>
+                                        </div>
+                                        <div class="v-link">
+                                            <h1>動画リンク
+                                            </h1>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="chip-right-main-inner">
+                                    <div class="chip-box-p-no border-left">
+                                        <h1>リリースプレート
+                                            <br> SQRPシリーズ
+                                        </h1>
+                                    </div>
+                                    <div class="chip-shape-img border-left">
+                                        <span>
                   <img src="img/last-c.png"/>
                 </span>
-              </div>
-              <div class="Use border-left">
-                <p>高速ピッチ変換
-                  <br>
-                  移送用基板
-                </p>
-              </div>
-              <div class="equipment border-left">
-                <p>マストランスファー
-                  <br>
-                  装置
-                  <br>
-                  (信越エンジニアリング
-                  株式会社製）
-                </p>
-              </div>
-              <div class="grade border-left">
-                <p>SQRP-4021-1-4
-                </p>
-              </div>
-              <div class="b-size border-left">
-                <p>Φ4インチ
-                  <br>
-                  厚み1mm
-                </p>
-              </div>
-              <div class="v-link border-left cs7">
-                <div classs="last-v-link">
-                  <div class="last-v-main">
-                    <p>リリースプレートに移送
-                    </p>
-                    <button class="lst-btn-name">動画準備中
+                                    </div>
+                                    <div class="Use border-left">
+                                        <p>高速ピッチ変換
+                                            <br> 移送用基板
+                                        </p>
+                                    </div>
+                                    <div class="equipment border-left">
+                                        <p>マストランスファー
+                                            <br> 装置
+                                            <br> (信越エンジニアリング 株式会社製）
+                                        </p>
+                                    </div>
+                                    <div class="grade border-left">
+                                        <p>SQRP-4021-1-4
+                                        </p>
+                                    </div>
+                                    <div class="b-size border-left">
+                                        <p>Φ4インチ
+                                            <br> 厚み1mm
+                                        </p>
+                                    </div>
+                                    <div class="v-link border-left cs7">
+                                        <div classs="last-v-link">
+                                            <div class="last-v-main">
+                                                <p>リリースプレートに移送
+                                                </p>
+                                                <button class="lst-btn-name">動画準備中
                     </button>
-                  </div>
-                  <div class="last-v-main">
-                    <p>大型ドナープレートに
-                      高速マストランスファー
-                    </p>
-                    <button class="lst-btn-name">動画準備中
+                                            </div>
+                                            <div class="last-v-main">
+                                                <p>大型ドナープレートに 高速マストランスファー
+                                                </p>
+                                                <button class="lst-btn-name">動画準備中
                     </button>
-                  </div>
-                  <div class="last-v-main">
-                    <p>ドナープレート上のリペア
-                    </p>
-                    <button class="lst-btn-name">動画準備中
+                                            </div>
+                                            <div class="last-v-main">
+                                                <p>ドナープレート上のリペア
+                                                </p>
+                                                <button class="lst-btn-name">動画準備中
                     </button>
-                  </div>
-                  <div>
-                  </div>
+                                            </div>
+                                            <div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <div class="col-12">
+                    <div class="instruction wow fadeInUp" data-wow-duration="0.5s">
+                        お客様のご要望に応じて、
+                        <br> 基板サイズ、スタンプデザイン、材料特性、厚みなどのカスタマイズが可能です。
+                    </div>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
-      <div class="col-12">
-        <div class="instruction wow fadeInUp" data-wow-duration="0.5s">
-          お客様のご要望に応じて、
-          <br>
-          基板サイズ、スタンプデザイン、材料特性、厚みなどのカスタマイズが可能です。
         </div>
-      </div>
-      </div>
-      </div>
-      </div>
     </section>
-  <!-- chip-transferlineq end -->
-  <!-- process section start -->
-  <section class="process-section">
-    <div class="container container-site">
-      <div class="row">
-        <div class="col-12">
-        <div class="process-heading wow fadeInUp" data-wow-duration="0.5s">
-          <h1>信越化学独自の素材の優れた特性</h1>
-          <p>Advantages of Shin-Etsu Unique materials</p>
+    <!-- chip-transferlineq end -->
+    <!-- process section start -->
+    <section class="process-section">
+        <div class="container container-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="process-heading wow fadeInUp" data-wow-duration="0.5s">
+                        <h1>信越化学独自の素材の優れた特性</h1>
+                        <p>Advantages of Shin-Etsu Unique materials</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="process-img wow fadeInUp" data-wow-duration="1s">
+                        <img src="img/process-1.png" />
+                        <p>シリコーン</p>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="process-img wow fadeInUp" data-wow-duration="1.5s">
+                        <img src="img/process-2.png" />
+                        <p>合成石英ガラス基板</p>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      </div>
-      <div class="row">
-        <div class="col-md-6">
-          <div class="process-img wow fadeInUp" data-wow-duration="1s">
-            <img src="img/process-1.png"/>
-            <p>シリコーン</p>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="process-img wow fadeInUp" data-wow-duration="1.5s">
-            <img src="img/process-2.png"/>
-            <p>合成石英ガラス基板</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- process section end -->
+    </section>
+    <!-- process section end -->
 
     <!-- product feature start -->
-<section class="product-feature">
-  <div class="container container-site">
-    <div class="row">
-      <div class="col-12">
-        <div class="process-heading wow fadeInUp" data-wow-duration="1s">
-          <h1>製品の特長</h1>
-          <p>Products Features</p>
-        </div>
-      </div>
-    </div>
+    <section class="product-feature">
+        <div class="container container-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="process-heading wow fadeInUp" data-wow-duration="1s">
+                        <h1>製品の特長</h1>
+                        <p>Products Features</p>
+                    </div>
+                </div>
+            </div>
 
-    <div class="row">
-      <div class="col-12">
-        <div class="p-feature-list">
-          <ul>
-            <li>
-              <div class="feature-list wow fadeInUp" data-wow-duration="0.5s">
-                <p><span>EZ-PETAMPシリーズ</span>は、当社独自のシリコーンの粘着性最適化技術と製品のバリエーションに精密微細加工技術を組み合わせた製品で、お客様のご要望に合わせたマイクロLEDチップのピックアンドプレイスを可能にします。</p>
-              </div>
-            </li>
-            <li>
-              <div class="feature-list wow fadeInUp" data-wow-duration="1s">
-                <p><span>SQDPシリーズ(Shin-Etsu Quartz Donor Plate)</span>は、精密加工された合成石英ガラス基板上に、当社独自のシリコーンを用途に合わせて製膜した製品です。<br>
-レセプターとしてマイクロLEDチップを受け止めた後、洗浄工程を経て次の工程へ投入するドナーとなるため、当社ではドナープレートと呼んでいます。。</p>
-              </div>
-            </li>
-            <li>
-              <div class="feature-list wow fadeInUp" data-wow-duration="1.5s">
-                <p><span>SQRPシリーズ(Shin-Etsu Quartz Release Plate)</span>は、レーザー透過性の高い当社独自の合成石英ガラス基板上に、独自の特殊樹脂をアブレーション層として製膜した製品です。<br>
-低いレーザー出力でマイクロLEDチップを移送でき、デブリを最小限に抑えた設計となっています。チップを高速でピッチ変換しながら移送することが可能で、当社ではリリースプレートと呼んでいます。</p>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="p-in-btn">
-          <div class="p_inq_btn wow fadeInUp" data-wow-duration="1.5s">
-            <button>
+            <div class="row">
+                <div class="col-12">
+                    <div class="p-feature-list">
+                        <ul>
+                            <li>
+                                <div class="feature-list wow fadeInUp" data-wow-duration="0.5s">
+                                    <p><span>EZ-PETAMPシリーズ</span>は、当社独自のシリコーンの粘着性最適化技術と製品のバリエーションに精密微細加工技術を組み合わせた製品で、お客様のご要望に合わせたマイクロLEDチップのピックアンドプレイスを可能にします。</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-list wow fadeInUp" data-wow-duration="1s">
+                                    <p><span>SQDPシリーズ(Shin-Etsu Quartz Donor Plate)</span>は、精密加工された合成石英ガラス基板上に、当社独自のシリコーンを用途に合わせて製膜した製品です。<br> レセプターとしてマイクロLEDチップを受け止めた後、洗浄工程を経て次の工程へ投入するドナーとなるため、当社ではドナープレートと呼んでいます。。
+                                    </p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="feature-list wow fadeInUp" data-wow-duration="1.5s">
+                                    <p><span>SQRPシリーズ(Shin-Etsu Quartz Release Plate)</span>は、レーザー透過性の高い当社独自の合成石英ガラス基板上に、独自の特殊樹脂をアブレーション層として製膜した製品です。<br> 低いレーザー出力でマイクロLEDチップを移送でき、デブリを最小限に抑えた設計となっています。チップを高速でピッチ変換しながら移送することが可能で、当社ではリリースプレートと呼んでいます。
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="p-in-btn">
+                        <div class="p_inq_btn wow fadeInUp" data-wow-duration="1.5s">
+                            <button>
               製品のお問い合わせはこちら
               <img src="img/circle-right.svg">
             </button>
-          </div>
-        </div>
-      </div>
-    </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-  </div>
-</section>
+        </div>
+    </section>
     <!-- product feature end -->
     <!-- product deatil start -->
     <section class="product-details-section">
-      <div class="container container container-site">
-        <div class="row">
-          <div class="col-12">
-            <div class="other-products">
-              <h1>そのほかの製品情報
-              </h1>
-              <p>Other Products
-              </p>
+        <div class="container container container-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="other-products">
+                        <h1>そのほかの製品情報
+                        </h1>
+                        <p>Other Products
+                        </p>
+                    </div>
+                </div>
             </div>
-          </div>
+            <div class="row gx-73">
+                <div class="col-lg-4 col-md-6">
+                    <div class="pr-des-details wow fadeInUp" data-wow-duration="0.5s">
+                        <div class="pr-des-img">
+                            <img src="img/otherp1.png" />
+                        </div>
+                        <div class="p-des-detail">
+                            <p>エキシマレーザー
+                                <br> マルチレーザーリフトオフ装置
+                            </p>
+                        </div>
+                        <div class="p-de-btn">
+                            <button>
+                  <span>詳しくはこちら
+                  </span>
+                  <img src="img/p-btn.svg"/>
+                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pr-des-details wow fadeInUp" data-wow-duration="1s">
+                        <div class="pr-des-img">
+                            <img src="img/other-product-2.png" />
+                        </div>
+                        <div class="p-des-detail">
+                            <p>エキシマレーザー
+                                <br> 高速リペア装置
+                            </p>
+                        </div>
+                        <div class="p-de-btn">
+                            <button>
+                  <span>詳しくはこちら
+                  </span>
+                  <img src="img/p-btn.svg"/>
+                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pr-des-details mb-0 wow fadeInUp" data-wow-duration="1s">
+                        <div class="pr-des-img">
+                            <img src="img/other-p-3.png" />
+                        </div>
+                        <div class="p-des-detail">
+                            <p>エキシマレーザー
+                                <br> レーザーマストランスファー装置
+                            </p>
+                        </div>
+                        <div class="p-de-btn ">
+                            <button>
+                  <span>詳しくはこちら
+                  </span>
+                  <img src="img/p-btn.svg"/>
+                </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="pr-des-details mb-0 wow fadeInUp" data-wow-duration="1.5s">
+                        <div class="pr-des-img">
+                            <img src="img/other-p-4.png" />
+                        </div>
+                        <div class="p-des-detail">
+                            <p>ボンド装置/デボンド装置
+                            </p>
+                        </div>
+                        <div class="p-de-btn last-btn-margin">
+                            <button>
+                  <span>詳しくはこちら
+                  </span>
+                  <img src="img/p-btn.svg"/>
+                </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="row gx-73">
-          <div class="col-lg-4 col-md-6">
-            <div class="pr-des-details wow fadeInUp" data-wow-duration="0.5s">
-              <div class="pr-des-img">
-                <img src="img/otherp1.png"/>
-              </div>
-              <div class="p-des-detail">
-                <p>エキシマレーザー
-                  <br>
-                マルチレーザーリフトオフ装置
-                </p>
-              </div>
-              <div class="p-de-btn">
-                <button>
-                  <span>詳しくはこちら
-                  </span>
-                  <img src="img/p-btn.svg"/>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="pr-des-details wow fadeInUp" data-wow-duration="1s">
-              <div class="pr-des-img">
-                <img src="img/other-product-2.png"/>
-              </div>
-              <div class="p-des-detail">
-                <p>エキシマレーザー
-                  <br>
-                  高速リペア装置
-                </p>
-              </div>
-              <div class="p-de-btn">
-                <button>
-                  <span>詳しくはこちら
-                  </span>
-                  <img src="img/p-btn.svg"/>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="pr-des-details mb-0 wow fadeInUp" data-wow-duration="1s">
-              <div class="pr-des-img">
-                <img src="img/other-p-3.png"/>
-              </div>
-              <div class="p-des-detail">
-                <p>エキシマレーザー
-                  <br>
-                  レーザーマストランスファー装置
-                </p>
-              </div>
-              <div class="p-de-btn ">
-                <button>
-                  <span>詳しくはこちら
-                  </span>
-                  <img src="img/p-btn.svg"/>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="pr-des-details mb-0 wow fadeInUp" data-wow-duration="1.5s">
-              <div class="pr-des-img">
-                <img src="img/other-p-4.png"/>
-              </div>
-              <div class="p-des-detail">
-                <p>ボンド装置/デボンド装置
-                </p>
-              </div>
-              <div class="p-de-btn last-btn-margin">
-                <button>
-                  <span>詳しくはこちら
-                  </span>
-                  <img src="img/p-btn.svg"/>
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
     </section>
 
-  <section class="last-banner mt-30">
-    <div class="container container-site">
-      <div class="row">
-        <div class="col-md-12 col-lg-4">
-          <div class="process-banner wow fadeInUp" data-wow-duration="1s">
-            <a href="javascript:;">
-              <div class="pro-heading ">
-                <h1 class="text-capitalize">
-                  <color>【動画で見る】
-                  </color>信越化学が提供する
-                </h1>
-                <h2>マイクロLED製造一貫プロセス
-                </h2>
-                <p>【Watch in Video】Learn Shin-Etsu
-                  <br> Micro LED Chip Transfer Technologies
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-        <div class="col-md-12 col-lg-4">
-          <div class="product-banner wow fadeInUp" data-wow-duration="1s">
-            <a href="javascript:;">
-              <div class="product-banner-detial">
-                <div class="p-image">
-                  <img src="img/baner-2img.png">
+    <section class="last-banner mt-30">
+        <div class="container container-site">
+            <div class="row">
+                <div class="col-md-12 col-lg-4">
+                    <div class="process-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="pro-heading ">
+                                <h1 class="text-capitalize">
+                                    <color>【動画で見る】
+                                    </color>信越化学が提供する
+                                </h1>
+                                <h2>マイクロLED製造一貫プロセス
+                                </h2>
+                                <p>【Watch in Video】Learn Shin-Etsu
+                                    <br> Micro LED Chip Transfer Technologies
+                                </p>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-                <div class="p-detail">
-                  <h1 class="text-capitalize">製品情報
-                  </h1>
-                  <p> Products
-                  </p>
+                <div class="col-md-12 col-lg-4">
+                    <div class="product-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="product-banner-detial">
+                                <div class="p-image">
+                                    <img src="img/baner-2img.png">
+                                </div>
+                                <div class="p-detail">
+                                    <h1 class="text-capitalize">製品情報
+                                    </h1>
+                                    <p> Products
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
                 </div>
-              </div>
-            </a>
-          </div>
+                <div class="col-md-12 col-lg-4">
+                    <div class="contact-banner wow fadeInUp" data-wow-duration="1s">
+                        <a href="javascript:;">
+                            <div class="contact-detail">
+                                <h1 class="text-capitalize">お問い合わせ
+                                </h1>
+                                <p>Contact
+                                </p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="col-md-12 col-lg-4">
-          <div class="contact-banner wow fadeInUp" data-wow-duration="1s">
-            <a href="javascript:;">
-              <div class="contact-detail">
-                <h1 class="text-capitalize">お問い合わせ
-                </h1>
-                <p>Contact
-                </p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- footer section start -->
-  <section class="footer-section">
-    <div class="container container-site">
-      <div class="row">
-        <div class="col-12">
-          <div class="f-detail">
-            <ul>
-              <li>
-                <a href="javascript:;">HOME
+    </section>
+    <!-- footer section start -->
+    <section class="footer-section">
+        <div class="container container-site">
+            <div class="row">
+                <div class="col-12">
+                    <div class="f-detail">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">HOME
                 </a>
-              </li>
-              <li>
-                <a href="javascript:;">【動画で見る】信越化学が提供するマイクロLED製造一貫プロセス
+                            </li>
+                            <li>
+                                <a href="javascript:;">【動画で見る】信越化学が提供するマイクロLED製造一貫プロセス
                 </a>
-              </li>
-              <li>
-                <a href="javascript:;">製品情報
+                            </li>
+                            <li>
+                                <a href="javascript:;">製品情報
                 </a>
-              </li>
-              <li>
-                <a href="javascript:;" class="b-none">お問い合わせ
+                            </li>
+                            <li>
+                                <a href="javascript:;" class="b-none">お問い合わせ
                 </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="f-sub-section">
-            <ul>
-              <li>
-                <a href="javascript:;">
-                  <span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="f-sub-section">
+                        <ul>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                       <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M6.562.562a6,6,0,1,1-6,6A6,6,0,0,1,6.562.562Zm-.7,3.474L7.69,5.788H3.272a.579.579,0,0,0-.581.581v.387a.579.579,0,0,0,.581.581H7.69L5.863,9.088a.581.581,0,0,0-.01.83l.266.264a.578.578,0,0,0,.82,0l3.21-3.208a.578.578,0,0,0,0-.82L6.94,2.941a.578.578,0,0,0-.82,0L5.854,3.2a.584.584,0,0,0,.01.832Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
                     </svg>
                   </span>
-                  <p>個人情報保護ポリシーについて
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span>
+                                    <p>個人情報保護ポリシーについて
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                       <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M6.562.562a6,6,0,1,1-6,6A6,6,0,0,1,6.562.562Zm-.7,3.474L7.69,5.788H3.272a.579.579,0,0,0-.581.581v.387a.579.579,0,0,0,.581.581H7.69L5.863,9.088a.581.581,0,0,0-.01.83l.266.264a.578.578,0,0,0,.82,0l3.21-3.208a.578.578,0,0,0,0-.82L6.94,2.941a.578.578,0,0,0-.82,0L5.854,3.2a.584.584,0,0,0,.01.832Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
                     </svg>
                   </span>
-                  <p>信越化学工業ウェブサイトへ
-                  </p>
-                </a>
-              </li>
-              <li>
-                <a href="javascript:;">
-                  <span>
+                                    <p>信越化学工業ウェブサイトへ
+                                    </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:;">
+                                    <span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12">
                       <path id="Icon_awesome-arrow-circle-right" data-name="Icon awesome-arrow-circle-right" d="M6.562.562a6,6,0,1,1-6,6A6,6,0,0,1,6.562.562Zm-.7,3.474L7.69,5.788H3.272a.579.579,0,0,0-.581.581v.387a.579.579,0,0,0,.581.581H7.69L5.863,9.088a.581.581,0,0,0-.01.83l.266.264a.578.578,0,0,0,.82,0l3.21-3.208a.578.578,0,0,0,0-.82L6.94,2.941a.578.578,0,0,0-.82,0L5.854,3.2a.584.584,0,0,0,.01.832Z" transform="translate(-0.563 -0.563)" fill="#009b94"/>
                     </svg>
                   </span>
-                  <p>信越グループ マテリアルガイド
-                  </p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-12">
-          <div class="copyrigth-section">
-            <p>Copyright © Shin-Etsu Chemical Co., Ltd. All rights reserved.
-            </p>
-          </div>
-        </div>
-        <div class="back-top">
-          <a href="#top" class="back-to-top d-flex align-items-center justify-content-center">
-            <span>このページの先頭へ
+                                    <p>信越グループ マテリアルガイド
+                                    </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="copyrigth-section">
+                        <p>Copyright © Shin-Etsu Chemical Co., Ltd. All rights reserved.
+                        </p>
+                    </div>
+                </div>
+                <div class="back-top">
+                    <a href="#top" class="back-to-top d-flex align-items-center justify-content-center">
+                        <span>このページの先頭へ
             </span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14">
               <path id="Icon_awesome-arrow-circle-up" data-name="Icon awesome-arrow-circle-up" d="M.563,7.563a7,7,0,1,1,7,7A7,7,0,0,1,.563,7.563Zm4.053.816L6.659,6.247V11.4a.676.676,0,0,0,.677.677h.452a.676.676,0,0,0,.677-.677V6.247l2.044,2.131a.678.678,0,0,0,.968.011l.308-.31a.675.675,0,0,0,0-.957L8.042,3.377a.675.675,0,0,0-.957,0L3.337,7.122a.675.675,0,0,0,0,.957l.308.31A.682.682,0,0,0,4.616,8.378Z" transform="translate(-0.563 -0.563)" fill="#333"/>
             </svg>
-          </a>
+                    </a>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  <!-- footer section start -->
-  <!-- Option 1: Bootstrap Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
-  </script>
-  <script type="text/javascript" src="js/wow.min.js">
-  </script>
-  <script>
-    new WOW().init();
-  </script>
-  </body>
+    </section>
+    <!-- footer section start -->
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+    </script>
+    <script type="text/javascript" src="js/wow.min.js">
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
 </html>
