@@ -188,8 +188,11 @@ button:focus {
 
 .banner-bottom-left-image img {
     width: 100%;
+    width: 235px;
 }
-
+.process-h {
+    text-align: center;
+}
 .video-section {
     position: relative;
     padding-bottom: 0;
@@ -384,6 +387,7 @@ button:focus {
     font-size: 36px;
     font-family: 'yubold', sans-serif;
     font-weight: bold;
+    text-align: center;
 }
 
 .f-lsit-left h2 {
@@ -1760,8 +1764,11 @@ button:focus {
     font-weight: bold;
     font-family: 'yubold', sans-serif;
     color: #2D2D2D;
+    text-align: center;
 }
-
+.nav-link:focus, .nav-link:hover {
+    color: #009b94;
+}
 .Use h1 {
     font-size: 15px;
     font-weight: bold;
@@ -2195,6 +2202,10 @@ button:focus {
 }
 
 @media (max-width: 1300px) {
+  .banner-bottom-left-image img {
+    width: 100%;
+  
+}
     .navbar-brand {
         margin-left: 0px;
     }

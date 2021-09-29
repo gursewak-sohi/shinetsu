@@ -27,12 +27,12 @@
             visibility: hidden;
             z-index: 9999;
         }
-        
+
         .page-loading.active {
             opacity: 1;
             visibility: visible;
         }
-        
+
         .page-loading-inner {
             position: absolute;
             top: 50%;
@@ -45,11 +45,11 @@
             transition: opacity .2s ease-in-out;
             opacity: 0;
         }
-        
+
         .page-loading.active>.page-loading-inner {
             opacity: 1;
         }
-        
+
         .page-loading-inner>span {
             display: block;
             font-family: 'Inter', sans-serif;
@@ -57,7 +57,7 @@
             font-weight: normal;
             color: #009B94;
         }
-        
+
         .page-spinner {
             display: inline-block;
             width: 2.75rem;
@@ -70,14 +70,14 @@
             -webkit-animation: spinner .75s linear infinite;
             animation: spinner .75s linear infinite;
         }
-        
+
         @-webkit-keyframes spinner {
             100% {
                 -webkit-transform: rotate(360deg);
                 transform: rotate(360deg);
             }
         }
-        
+
         @keyframes spinner {
             100% {
                 -webkit-transform: rotate(360deg);
@@ -137,12 +137,14 @@
                     </li>
                     <li class="nav-item d-lg-none d-md-block">
                         <a class="nav-link" href="#">
-                            <span>製品情報</span>
+                            <span lang="jp">製品情報</span>
+                            <span lang="en">Products</span>
                         </a>
                     </li>
                     <li class="nav-item d-lg-none d-md-block">
                         <a class="nav-link" href="#">
-                            <span>お問い合わせ</span>
+                            <span lang="jp">お問い合わせ</span>
+                            <span lang="en">Contact</span>
                         </a>
                     </li>
                     <li class="nav-item d-lg-none d-md-block">
@@ -199,7 +201,12 @@
                             </div>
                             <div class="banner-content-right-content">
                                 <p>
-                                    マイクロLEDディスプレイは、次世代ディスプレイの最有力候補とされていますが、微細チップの取り扱いの難しさゆえ、高い製造コストが量産化実現への大きな障害になっています。<br> 特に、マイクロLEDチップ製造工程と各チップの移送工程の複雑さや低い歩留まりの改善が量産化へのカギであり、信越化学グループの技術を結集してこの課題を解決する技術を開発しました。
+                                    <span lang="jp">マイクロLEDディスプレイは、次世代ディスプレイの最有力候補とされていますが、微細チップの取り扱いの難しさゆえ、高い製造コストが量産化実現への大きな障害になっています</span>
+                                    <span lang="en">Micro LED display is regarded as the most promising candidate for next-generation display, however high manufacturing cost is major hurdle for the mass production due to difficulty to handle extremely small LED chips.</span>
+
+                                    <br>
+                                    <span lang="jp">特に、マイクロLEDチップ製造工程と各チップの移送工程の複雑さや低い歩留まりの改善が量産化へのカギであり、信越化学グループの技術を結集してこの課題を解決する技術を開発しました。</span>
+                                      <span lang="en">Improvement of complexity and low yield of Micro LED chip manufacturing and transferring process is the key for mass production, and we have utilized and developed our technology to solve these problems.</span>
                                 </p>
                             </div>
                         </div>
@@ -211,7 +218,7 @@
                             </div>
                             <div class="b-detial">
                                 <div class="block-1">
-                                    <h1>信越化学独自の素材</h1>
+                                    <h1><span lang="jp">信越化学独自の素材</span><span lang="en">Shin-Etsu Unique Material Technology</span></h1>
                                     <span><img src="img/Group-img1.png"/></span>
                                 </div>
                                 <div class="block-2">
@@ -233,7 +240,7 @@
                          </span>
                                 </div>
                                 <div class="block-1">
-                                    <h1>エキシマレーザー装に修正</h1>
+                                    <h1><span lang="jp">エキシマレーザー装に修正</span> <span lang="en">Excimer Laser Equipment</span></h1>
                                     <span><img src="img/group2-img.png"/></span>
                                 </div>
                             </div>
@@ -262,9 +269,16 @@
                     <div class="process-banner wow fadeInUp" data-wow-duration="0.5s">
                         <a href="javascript:;">
                             <div class="pro-heading ">
+                              <span lang="jp">
                                 <h1 class="text-capitalize">
                                     <color>【動画で見る】</color>信越化学が提供する</h1>
                                 <h2>マイクロLED製造一貫プロセス</h2>
+                              </span>
+                              <span lang="en">
+                                <h1 class="text-capitalize">
+                                    Learn Shin-Etsu Micro LED Chip Transfer Technologies</h1>
+
+                              </span>
                                 <p>【Watch in Video】Learn Shin-Etsu<br> Micro LED Chip Transfer Technologies</p>
                             </div>
                         </a>
@@ -278,7 +292,7 @@
                                     <img src="img/baner-2img.png" />
                                 </div>
                                 <div class="p-detail">
-                                    <h1 class="text-capitalize">製品情報</h1>
+                                    <h1 class="text-capitalize"><span lang="jp">製品情報</span><span lang="en">Products</span></h1>
                                     <p> Products</p>
                                 </div>
                             </div>
@@ -289,7 +303,8 @@
                     <div class="contact-banner wow fadeInUp" data-wow-duration="1.5s">
                         <a href="javascript:;">
                             <div class="contact-detail">
-                                <h1 class="text-capitalize">お問い合わせ</h1>
+                                <h1 class="text-capitalize">  <span lang="jp">お問い合わせ</span>
+                                  <span lang="en">Contact</span></h1>
                                 <p>Contact</p>
                             </div>
                         </a>
@@ -305,7 +320,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="whats-news-heading wow fadeInUp" data-wow-duration="1s">
-                        <h1>特長</h1>
+                        <h1><span lang="jp">特長</span> <span lang="en">Features</span</h1>
                         <h2>Features</h2>
                     </div>
                 </div>
@@ -315,24 +330,24 @@
                             <li>
                                 <div class="f-list wow fadeInUp" data-wow-duration="0..5s">
                                     <div class="f-lsit-left ">
-                                        <h1 class="text-capitalize">シンプル</h1>
+                                        <h1 class="text-capitalize"><span lang="jp">シンプル</span><span lang="en">Simple</span></h1>
                                         <h2>Simple</h2>
                                     </div>
                                     <div class="f-lsit-right">
-                                        <h1 class="text-capitalize">レーザーリフトオフ*</h1>
-                                        <p>従来技術に比べてより単純化したプロセスで製造可能です。</p>
+                                        <h1 class="text-capitalize"><span lang="jp">レーザーリフトオフ*</span><span lang="en">Laser Lift Off*</span></h1>
+                                        <p><span lang="jp">従来技術に比べてより単純化したプロセスで製造可能です。</span><span lang="en">Much simplified compared with conventional micro LED chip process</span></p>
                                     </div>
                                 </div>
                             </li>
                             <li>
                                 <div class="f-list wow fadeInUp" data-wow-duration="1.5s">
                                     <div class="f-lsit-left">
-                                        <h1 class="text-capitalize">高速</h1>
+                                        <h1 class="text-capitalize"><span lang="jp">高速</span><span lang="en">Ultra High Speed</span></h1>
                                         <h2>Speed</h2>
                                     </div>
                                     <div class="f-lsit-right">
-                                        <h1 class="text-capitalize">レーザーによる連続移送*</h1>
-                                        <p>独自のステージアーキテクチャーとビ により高速なチップ移送が可能です。 に修正
+                                        <h1 class="text-capitalize"><span lang="jp">レーザーによる連続移送*</span><span lang="en">Consecutive mass transfer by laser</span></h1>
+                                        <p><span lang="jp">独自のステージアーキテクチャーとビ により高速なチップ移送が可能です。 に修正</span><span lang="en">Ultra High speed micro LED chip transfer</span>
                                         </p>
                                     </div>
                                 </div>
@@ -340,12 +355,12 @@
                             <li>
                                 <div class="f-list wow fadeInUp" data-wow-duration="1.5s">
                                     <div class="f-lsit-left">
-                                        <h1 class="text-capitalize">正確</h1>
+                                        <h1 class="text-capitalize"><span lang="jp">正確</span><span lang="en">Accurate</span></h1>
                                         <h2>Aaccurate</h2>
                                     </div>
                                     <div class="f-lsit-right">
-                                        <h1 class="text-capitalize">レーザー移送時の高精度位置決め</h1>
-                                        <p>高精度位置決めを実現する設備動作により正確なチップ移送が可能です。</p>
+                                        <h1 class="text-capitalize"><span lang="jp">レーザー移送時の高精度位置決め</span><span lang="en">High-precision laser transfer</span></h1>
+                                        <p><span lang="jp">高精度位置決めを実現する設備動作により正確なチップ移送が可能です。</span><span lang="en">Accurate micro LED chip transfer by high-precision motion technology</span></p>
                                     </div>
                                 </div>
                             </li>
@@ -355,9 +370,16 @@
                 <div class="col-12">
                     <div class="feature-next-section">
                         <div class="f-heading-sub-heading">
-                            <h1 class="wow fadeInUp" data-wow-duration="1s">※ レーザーリフトオフ(Laser Lift Off/LLO) <span>とは、</span></h1>
-                            <p class="wow fadeInUp" data-wow-duration="1.5s">マイクロLEDウエハーまたは、移送部品上に配列されたチップの裏面側よりエキシマレーザーを照射することによってチップのみを剥離、レセプター基板へ移送する工程のことです。<br> 信越化学グループは、移送部品と接触した状態でLLOを行うContact-LLOと、非接触の状態でLLOを行うGap-LLOのそれぞれに対応した製造装置と移送部品を取り揃えています。
-                                <br> これによって、さまざまなニーズに対応した移送プロセスのご提案が可能です。
+                            <h1 class="wow fadeInUp" data-wow-duration="1s"> <span lang="jp"><color style="color:#009b94";>※ レーザーリフトオフ(Laser Lift Off/LLO)</color></span><span lang="en"><color style="color:#009b94";>*Laser Lift Off/LLO is a process </color></span> <span>とは、</span></h1>
+                            <p class="wow fadeInUp" data-wow-duration="1.5s">
+                              <span lang="jp">マイクロLEDウエハーまたは、移送部品上に配列されたチップの裏面側よりエキシマレーザーを照射することによってチップのみを剥離、レセプター基板へ移送する工程のことです。</span>
+                              <span lang="en">to peel off and transfer micro LED chips by irradiating excimer laser from the back side of the micro LED wafer or transfer parts on which chips are arrayed.</span>
+                              <br>
+                              <span lang="jp">信越化学グループは、移送部品と接触した状態でLLOを行うContact-LLOと、非接触の状態でLLOを行うGap-LLOのそれぞれに対応した製造装置と移送部品を取り揃えています。</span>
+                              <span lamg="en">Shin-Etsu Group provides transfer equipment and parts suitable both for Contact-LLO (transfer micro LED chips to transfer parts with contact) and for Gap-LLO (transfer micro LED chips to transfer parts without contact)</span>
+                                <br>
+                                <span lang="jp">これによって、さまざまなニーズに対応した移送プロセスのご提案が可能です。</span>
+                                <span lang="en">We can provide transfer process suitable for various applications (TV, smart watch, etc).</span>
                             </p>
                         </div>
                         <div class="features-products">
@@ -408,7 +430,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="fs-h wow fadeInUp" data-wow-duration="1s">
-                        <h1>信越化学グループが提供するプロセス技術と製品群</h1>
+                        <h1>
+                          <span lang="jp">信越化学グループが提供するプロセス技術と製品群</span>
+                          <span lang="en">Process Technologies and Products provided by Shin-Etsu Chemical Group</span>
+                        </h1>
                         <p>Process Technologies and Products Provided by Shin-Etsu Chemical Group</p>
                     </div>
                 </div>
@@ -422,7 +447,8 @@
             <div class="row">
                 <div class="col-12">
                     <div class="process-h wow fadeInUp" data-wow-duration="1s">
-                        <h1>マイクロLEDウエハーからバックプレーンまで、マイクロLEDチップの一貫移送プロセスに対応</h1>
+                        <h1><span lang="jp">マイクロLEDウエハーからバックプレーンまで、マイクロLEDチップの一貫移送プロセスに対応</span></h1>
+                        <span lang="en">Integrated micro LED chip transfer process from micro LED wafer to backplane</span>
                     </div>
                 </div>
             </div>
@@ -431,13 +457,13 @@
                     <div class="process-section-mains">
                         <Div class="process-heading-section">
                             <div class="preocess ">
-                                <p class="text-capitalize">プロセス</p>
+                                <p class="text-capitalize"><span lang="jp">プロセス</span><span lang="en">Process</span></p>
                             </div>
                             <div class="equpment ">
-                                <p>装置</p>
+                                <p><span lang="jp">装置</span> <span lang="en">Equipment</span></p>
                             </div>
                             <div class="tans-part ">
-                                <p>移送部品</p>
+                                <p><span lang="jp">移送部品</span><span lang="en">Transfer parts</span></p>
                             </div>
                         </div>
                         <div class="block-time">
@@ -497,8 +523,10 @@
                                     </div>
                                     <div class="equip-sec">
                                         <div class="equip-sec-img"><img src="img/select.png" /></div>
-                                        <p>エキシマレーザー<br> マルチレーザーリフトオフ
+                                        <p lang="jp">エキシマレーザー<br> マルチレーザーリフトオフ
+
                                         </p>
+                                        <p lang="en">Multi Laser Lift <br>Off Equipment (U/Excimer Laser)</p>
                                     </div>
                                     <div class="tran-sec">
                                         <div class="trans-sec-img"><img src="img/sdqp.png" /></div>
@@ -520,7 +548,9 @@
                                 </div>
                                 <div class="equipment-details">
                                     <div class="equipment-heading">
-                                        <p>SQRPへ移送</p>
+                                        <p><span lang="jp">SQRPへ移送</span>
+                                          <span lang="en">SQRPへ移送</span>
+                                        </p>
                                     </div>
                                     <div class="equipment-images">
                                         <div class="equipment-top-block">
@@ -575,7 +605,7 @@
                                         <div class="equip-sec-img">
                                             <img src="img/p-img-2.png" />
                                         </div>
-                                        <p>ボンドデボンド装置</p>
+                                        <p><span lang="jp">ボンドデボンド装置</span><span lang="en">Bonding/Debonding Equipment</span></p>
                                     </div>
                                     <div class="tran-sec">
                                         <div class="img-last-sec">
@@ -653,10 +683,10 @@
                                         </div>
                                         <div class="contact-lio-btns">
                                             <div class="other-label ht">
-                                                ドナープレート（SQDPシリーズ）上のリペア
+                                                <p>ドナープレート<span lang="jp">（SQDPシリーズ）</span> <span lang="en">（SQDP Series）</span>上のリペア</p>
                                             </div>
                                             <div class="other-label ht">
-                                                ドナープレート（SQDPシリーズ） 上のリペアピクセルピッチ変換後
+                                                <p>ドナープレート<span lang="jp">（SQDPシリーズ）</span> <span lang="en">（SQDP Series）</span> 上のリペアピクセルピッチ変換後</p>
                                             </div>
                                         </div>
                                     </div>
@@ -664,7 +694,8 @@
                                         <div class="equip-sec-img">
                                             <img src="img/select.png" />
                                         </div>
-                                        <p>エキシマレーザー 高速リペア装置 （トリミング/リペア装置）
+                                        <p><span lang="jp">エキシマレーザー 高速リペア装置 （トリミング/リペア装置）</span> <span lang="en">High-Speed Repair Equipment (U/Excimer Laser)
+(Trimming/Repair Equipment)</span>
                                         </p>
                                     </div>
                                     <div class="tran-sec last-row">
@@ -683,7 +714,7 @@
     </section>
     <!-- process section end -->
     <!-- last banner section start -->
-    <section class="last-banner">
+    <section class="last-banner ">
         <div class="container container-site">
             <div class="row">
                 <div class="col-md-12 col-lg-4">
@@ -691,9 +722,14 @@
                         <a href="javascript:;">
                             <div class="pro-heading ">
                                 <h1 class="text-capitalize">
-                                    <color>【動画で見る】</color>信越化学が提供する</h1>
-                                <h2>マイクロLED製造一貫プロセス</h2>
-                                <p>【Watch in Video】Learn Shin-Etsu<br> Micro LED Chip Transfer Technologies</p>
+                                    <color>【動画で見る】
+                                    </color>信越化学が提供する
+                                </h1>
+                                <h2>マイクロLED製造一貫プロセス
+                                </h2>
+                                <p>【Watch in Video】Learn Shin-Etsu
+                                    <br> Micro LED Chip Transfer Technologies
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -706,8 +742,11 @@
                                     <img src="img/baner-2img.png">
                                 </div>
                                 <div class="p-detail">
-                                    <h1 class="text-capitalize">製品情報</h1>
-                                    <p> Products</p>
+                                    <h1 lang="jp" class="text-capitalize">製品情報
+                                    <h1 lang="en">Product Information</h1>
+                                    </h1>
+                                    <p> Products
+                                    </p>
                                 </div>
                             </div>
                         </a>
@@ -717,8 +756,11 @@
                     <div class="contact-banner wow fadeInUp" data-wow-duration="1s">
                         <a href="javascript:;">
                             <div class="contact-detail">
-                                <h1 class="text-capitalize">お問い合わせ</h1>
-                                <p>Contact</p>
+                                <h1 class="text-capitalize">  <span lang="jp">お問い合わせ</span>
+                                  <span lang="en">Contact</span>
+                                </h1>
+                                <p>Contact
+                                </p>
                             </div>
                         </a>
                     </div>
@@ -736,8 +778,9 @@
                         <ul>
                             <li><a href="javascript:;">HOME</a></li>
                             <li><a href="javascript:;">【動画で見る】信越化学が提供するマイクロLED製造一貫プロセス</a></li>
-                            <li><a href="javascript:;">製品情報</a></li>
-                            <li><a href="javascript:;" class="b-none">お問い合わせ</a></li>
+                            <li><a href="javascript:;"><span lang="jp">製品情報</span><span lang="en">Products</span></a></li>
+                            <li><a href="javascript:;" class="b-none">  <span lang="jp">お問い合わせ</span>
+                              <span lang="en">Contact</span></a></li>
                         </ul>
                     </div>
                 </div>
